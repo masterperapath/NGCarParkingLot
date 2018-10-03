@@ -3,7 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 //routerComponent
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { LoginComponent } from './usign/login/login.component';
+import { SignUpComponent } from './usign/sign-up/sign-up.component';
+import { LandingComponent } from './landingPage/landing/landing.component';
+import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 import { Cp001Component } from './pages/cp001/cp001.component';
 import { Cp002Component } from './pages/cp002/cp002.component';
 import { Cp003Component } from './pages/cp003/cp003.component';
@@ -12,7 +15,7 @@ import { Cp005Component } from './pages/cp005/cp005.component';
 
 const routes: Routes = [{
   path: '',
-  component: DashboardComponent,
+  component: LandingComponent,
   children: [{
     path: 'dashboard',
     component: DashboardComponent
@@ -43,6 +46,9 @@ export class AppRoutingModule { }
 
 export const routedComponents = [
   AppComponent,
+  LoginComponent,
+  SignUpComponent,
+  LandingComponent,
   DashboardComponent,
   Cp001Component,
   Cp002Component,
