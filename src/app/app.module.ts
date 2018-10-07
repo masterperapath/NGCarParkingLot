@@ -16,7 +16,14 @@ import { Cp003Component } from './pages/cp003/cp003.component';
 import { Cp004Component } from './pages/cp004/cp004.component';
 import { Cp005Component } from './pages/cp005/cp005.component';
 
+import { RouterModule } from '@angular/router';
+import { NbThemeModule } from '@nebular/theme';
+import { NgxTinymceModule } from 'ngx-tinymce';
+import { ThemeModule } from './@theme/theme.module';
 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CoreModule } from './@core/core.module';
+import { NbLayoutModule, NbButtonModule } from '@nebular/theme';
 
 @NgModule({
   declarations: [
@@ -33,7 +40,13 @@ import { Cp005Component } from './pages/cp005/cp005.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NbThemeModule.forRoot({ name: 'default' }),
+
+    NbLayoutModule,
+    NbButtonModule,
+    NgbModule.forRoot(),
+    //  ThemeModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
