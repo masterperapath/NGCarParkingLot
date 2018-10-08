@@ -1,58 +1,61 @@
+import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {
+  NbAuthComponent,
+  NbLoginComponent,
+  NbLogoutComponent,
+  NbRegisterComponent,
+  NbRequestPasswordComponent,
+  NbResetPasswordComponent,
+} from '@nebular/auth';
 
-//routerComponent
-import { AppComponent } from './app.component';
-import { LoginComponent } from './usign/login/login.component';
-import { SignUpComponent } from './usign/sign-up/sign-up.component';
-import { LandingComponent } from './landingPage/landing/landing.component';
-import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
-import { Cp001Component } from './pages/cp001/cp001.component';
-import { Cp002Component } from './pages/cp002/cp002.component';
-import { Cp003Component } from './pages/cp003/cp003.component';
-import { Cp004Component } from './pages/cp004/cp004.component';
-import { Cp005Component } from './pages/cp005/cp005.component';
+import { LandingPageComponent } from './landingPage/landingpage.component';
 
-const routes: Routes = [{
-  path: '',
-  component: LandingComponent,
-  children: [{
-    path: 'dashboard',
-    component: DashboardComponent
-  },{
-    path: 'cp001',
-    component: Cp001Component
-  }, {
-    path: 'cp002',
-    component: Cp002Component
-  }, {
-    path: 'cp003',
-    component: Cp003Component
-  }, {
-    path: 'cp004',
-    component: Cp004Component
-  }, {
-    path: 'cp005',
-    component: Cp005Component
-  }, 
-]
-}];
+
+const routes: Routes = [
+   { path: 'pages', loadChildren: 'app/pages/pages.module#PagesModule' },
+  //{ path: '', loadChildren: 'app/landingPage/landingpage.module#LandingPageModule' },
+  {
+    path: 'auth',
+    component: NbAuthComponent,
+    children: [
+      {
+        path: '',
+        component: NbLoginComponent,
+      },
+      {
+        path: 'login',
+        component: NbLoginComponent,
+      },
+      {
+        path: 'register',
+        component: NbRegisterComponent,
+      },
+      {
+        path: 'logout',
+        component: NbLogoutComponent,
+      },
+      {
+        path: 'request-password',
+        component: NbRequestPasswordComponent,
+      },
+      {
+        path: 'reset-password',
+        component: NbResetPasswordComponent,
+      },
+    ],
+  },
+  { path: '', redirectTo: 'pages', pathMatch: 'full' },
+  { path: '**', redirectTo: 'pages' },
+];
+
+const config: ExtraOptions = {
+  useHash: true,
+};
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes, config)],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
-
-export const routedComponents = [
-  AppComponent,
-  LoginComponent,
-  SignUpComponent,
-  LandingComponent,
-  DashboardComponent,
-  Cp001Component,
-  Cp002Component,
-  Cp003Component,
-  Cp004Component,
-  Cp005Component,
-];
+export class AppRoutingModule {
+}
