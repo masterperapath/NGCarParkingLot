@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'ngx-landing',
+  selector: 'landing-pages',
   template: `
-  <landing-layout>
+  <ngx-sample-layout>
 
   <router-outlet></router-outlet>
-  </landing-layout>
+  </ngx-sample-layout>
   `,
 })
 export class LandingPageComponent {
-
 }
