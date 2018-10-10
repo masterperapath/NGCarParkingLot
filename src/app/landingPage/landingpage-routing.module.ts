@@ -2,17 +2,20 @@ import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 import { LandingComponent } from './landing/landing.component';
+import { LandingPageComponent } from './landingpage.component';
 
 const routes: Routes = [{
   path: '',
-  component: LandingComponent,
-  children: [{
-    path: 'landing',
-     component: LandingComponent,
-  },{
+  component: LandingPageComponent,
+  children: [
+    {
     path: '',
     redirectTo: 'landing',
     pathMatch: 'full',
+  }
+  ,{
+    path: 'landing',
+    component: LandingComponent 
   }],
 }];
 
@@ -20,5 +23,11 @@ const routes: Routes = [{
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class PagesRoutingModule {
+export class LandingRoutingModule {
+
 }
+
+export const QUESTION_COMPONENTS = [
+  LandingPageComponent,
+  LandingComponent
+];
