@@ -4,8 +4,6 @@ import { NgModule } from '@angular/core';
 import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
-import { LandingComponent } from '../landingPage/landing/landing.component';
-
 import { Cp001Component } from './cp001/cp001.component';
 import { Cp002Component } from './cp002/cp002.component';
 import { Cp003Component } from './cp003/cp003.component';
@@ -16,12 +14,9 @@ import { CP006Component } from './cp006/cp006.component';
 const routes: Routes = [{
   path: '',
   component: PagesComponent,
-  children: [{
-    path: 'landing',
-     component: LandingComponent,
-  }, {
-    path: 'iot-dashboard',
-    component: CP006Component,
+  children: [ {
+    path: 'dashboard',
+    component: DashboardComponent,
   }, {
     path: 'cp001',
     component: Cp001Component,
@@ -42,7 +37,7 @@ const routes: Routes = [{
     component: CP006Component,
   }, {
     path: '',
-    redirectTo: 'iot-dashboard',
+    redirectTo: 'dashboard',
     pathMatch: 'full',
   }, {
     path: '**',

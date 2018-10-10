@@ -2,19 +2,19 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { NgxEchartsModule } from 'ngx-echarts';
 
 import { ThemeModule } from '../@theme/theme.module';
-import { LandingRoutingModule, QUESTION_COMPONENTS } from './landingpage-routing.module';
-
+import { SignRoutingModule, SIGN_COMPONENTS } from './sign-routing.module';
 
 @NgModule({
   imports: [
-    LandingRoutingModule,
+    SignRoutingModule,
     ThemeModule,
     NgxEchartsModule,
   ],
   declarations: [
-    ...QUESTION_COMPONENTS,
+    ...SIGN_COMPONENTS,
   ],
+  // schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
-export class LandingPageModule { 
+export class SignModule { 
 
 }

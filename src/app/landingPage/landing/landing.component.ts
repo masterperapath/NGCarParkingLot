@@ -1,12 +1,38 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-// import { WINDOW } from "../../@theme/layouts/landing/window.service";
+import { WINDOW } from "../../@theme/layouts/landing/window.service";
 
 @Component({
   selector: 'ngx-landing',
   templateUrl: './landing.component.html',
   styleUrls: ['./landing.component.scss']
 })
-export class LandingComponent {
+export class LandingComponent implements OnInit {
   title = 'LandingComponent';
+
+  constructor(private router: Router) {
+
+  }
+
+  ngOnInit() {
+
+  }
+
+  dashboard(){
+    this.router.navigateByUrl('pages/dashboard');
+  }
+
+  login() {
+    this.router.navigateByUrl('sign/login');
+  }
+
+  signup() {
+    this.router.navigateByUrl('sign/sign-up');
+  }
+
+  forgot() {
+    this.router.navigateByUrl('sign/forgot');
+  }
+
 }
