@@ -13,8 +13,10 @@ import { LandingPageComponent } from './landingPage/landingpage.component';
 
 
 const routes: Routes = [
-   { path: '', loadChildren: 'app/landingPage/landingpage.module#LandingPageModule' },
+  { path: '', loadChildren: 'app/landingPage/landingpage.module#LandingPageModule' },
+  { path: 'sign', loadChildren: 'app/sign/sign.module#SignModule' },
   { path: 'pages', loadChildren: 'app/pages/pages.module#PagesModule' },
+  
   {
     path: 'auth',
     component: NbAuthComponent,

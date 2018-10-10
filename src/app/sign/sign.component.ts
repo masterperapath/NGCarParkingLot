@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'landing-pages',
+  selector: 'sign-pages',
   template: `
   <ngx-two-columns-layout>
 
@@ -9,5 +9,5 @@ import { Component } from '@angular/core';
   </ngx-two-columns-layout>
   `,
 })
-export class LandingPageComponent {
+export class SignComponent {
 }
