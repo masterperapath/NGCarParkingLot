@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngx-carparking": {
+    "ngx-admin-demo": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
