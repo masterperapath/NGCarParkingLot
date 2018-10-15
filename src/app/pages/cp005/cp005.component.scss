@@ -1,4 +1,33 @@
+//@import '../cp002/cp002.component.scss';
+@import '../cp003/cp003.component.scss';
+
 
 h1 {
     text-align: center;
 }
+
+.col-md-6.reserveDetail {
+    //margin: -1.25rem 0 -1.25rem -1.25rem;
+    // background: #5dcfe3;
+    color:#fff;
+    //padding: 1.25rem;
+}
+
+.qrCode {
+    display: block;
+    margin: 1rem auto;
+    width: 60%;
+}
+
+.qrCode button {
+    display: block;
+    margin: 1rem auto;
+}
+
+.btn-type-bg h1 i {
+    color: green;
+}
+
+// nb-card.no-padding nb-card-body {
+//     //padding: 0;
+// }

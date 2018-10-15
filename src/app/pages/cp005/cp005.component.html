@@ -1,5 +1,36 @@
-<h1>Hello World cp005</h1>
-<form class="form-control-group">
-    <input nbInput type="text" name="username">
-    <input type="text" name="password">
-</form>
+<nb-card>
+  <nb-card-header class="btn-type-bg">
+    <h1 class="white-text"><i class="fa fa-check"></i> {{titleStatus}}</h1>
+  </nb-card-header>
+</nb-card>
+
+<div class="row">
+  <div class="col-md-6 reserveDetail">
+    <nb-card class="no-padding" status="info">
+      <nb-card-header>
+        <h4 class="text-center text-white">รายละเอียดการจอง</h4>
+      </nb-card-header>
+      <nb-card-body>
+        <div class="">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores totam praesentium harum, repudiandae
+          beatae eius ab blanditiis molestiae, cupiditate, quo ex architecto provident delectus eaque maiores omnis
+          odio adipisci magni?
+        </div>
+      </nb-card-body>
+    </nb-card>
+  </div>
+  <div class="col-md-6">
+    <nb-card class="no-padding">
+      <nb-card-header>
+        <h4>QR Code</h4>
+        <hr style="width:100%;height:0.1rem;background-color:#ba7fec">
+      </nb-card-header>
+      <nb-card-body>
+        <div class="qrCode">
+          <img src="../../../assets/images/qrcode.png" alt="QRCode">
+          <button class="btn btn-full-width btn-success">Save QR Code</button>
+        </div>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>
