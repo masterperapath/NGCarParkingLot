@@ -14,7 +14,10 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ThemeModule } from './@theme/theme.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
+import { NbButtonModule } from '@nebular/theme/components/button/button.module';
+import { NbCardModule } from "@nebular/theme/components/card/card.module";
+import { NbInputModule } from "@nebular/theme";
+import { NgDatepickerModule } from 'ng2-datepicker';
 import { LandingPageComponent } from './landingPage/landingpage.component';
 const PAGES_COMPONENTS = [
 
@@ -26,8 +29,10 @@ const PAGES_COMPONENTS = [
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
-
-
+    NbButtonModule,
+    NbInputModule,
+    NgDatepickerModule,
+    NbCardModule,
     NgbModule.forRoot(),
     ThemeModule.forRoot(),
     CoreModule.forRoot(),

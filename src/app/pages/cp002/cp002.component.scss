@@ -1,0 +1,60 @@
+$lot-type-btn-width : 129px;
+$lot-type-btn-height : 42px;
+$shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12),
+0 2px 4px 0 rgba(0, 0, 0, 0.08);
+
+.lot-type-btn {
+  text-align: center;
+  //margin-bottom: 2rem;
+}
+
+.lot-type-btn button {
+  margin-left: 0.8rem;
+}
+
+/* lot type button */
+.btn-general {
+  background-color: #40dc7e;
+  width: $lot-type-btn-width;
+  height: $lot-type-btn-height;
+  // background-image: linear-gradient(to right, #40dcb2, #40dc7e);
+}
+
+.btn-dis {
+  background-color: #4ca6ff;
+  width: $lot-type-btn-width;
+  height: $lot-type-btn-height;
+  // background-image: linear-gradient(to right, #4cc4ff, #4ca6ff);
+}
+
+.btn-vip {
+  background-color: #ffa100;
+  width: $lot-type-btn-width;
+  height: $lot-type-btn-height;
+  // background-image: linear-gradient(to right, #ffcc00, #ffa100);
+}
+
+.btn-general:hover,
+.btn-dis:hover,
+.btn-vip:hover {
+  opacity: 0.8;
+}
+
+.shadow {
+  box-shadow: $shadow;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.white-text {
+  color: #fff;
+}
+
+.btn-type-bg {
+  // background-image: url("https://images.unsplash.com/photo-1532217635-b45271b1aab6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=57357fbad9440abd8d00c56b79ce43c4&auto=format&fit=crop&w=800&q=80");
+  background: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)) ,
+    url("../../../assets/images/bg-header.jpg");
+  object-fit: scale-down;
+}
