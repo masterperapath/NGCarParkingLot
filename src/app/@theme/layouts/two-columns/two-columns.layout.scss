@@ -2,6 +2,7 @@
 @import '~bootstrap/scss/mixins/breakpoints';
 @import '~@nebular/theme/styles/global/breakpoints';
 
+
 @include nb-install-component() {
   nb-layout-column.small {
     flex: 0.15 !important;
@@ -132,6 +133,14 @@
       padding: 0.75rem !important;
 
     }
+  }
+
+  .main-content {
+    background-image: url('assets/img/login.jpg');
+    background-size: cover;
+    // height: 105%; 
+    // margin-top: -2%;
+    // background-color: black
   }
 
   @include media-breakpoint-down(sm) {

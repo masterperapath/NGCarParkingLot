@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
+import { FormGroup } from '@angular/forms';
 import { NbThemeService } from '@nebular/theme';
 import { takeWhile } from 'rxjs/operators/takeWhile' ;
 
@@ -22,6 +23,10 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
 
   }
+
+  // form = new FormGroup({
+
+  // });
 
   relanding(){
     this.router.navigateByUrl("/landing");
