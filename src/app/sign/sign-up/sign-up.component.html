@@ -2,3 +2,77 @@
 <div>
         <button class="btn btn-danger" type="button" (click)="relanding()">Return Landing</button>
        </div>
+
+       <!--  -->
+
+       <nb-card-body>
+        <div class="page-header" data-parallax="true" style="background-color: gray">
+          <div class="card-bg ">
+            <br>
+            <div class="form-group row">
+              <div class="col-md-12" style="text-align: center;">
+                <h2 class="form-control-label" style="color: white;">Create Your Account</h2>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-md-6" style="border-right:solid">
+                <div class="form-group row">
+                  <div class="offset-md-4 col-md-8">
+                    <label class="form-control-label" style="color: white;">Username</label>
+                    <div class="input-group has-person-icon">
+                      <input type="text" class="form-control" placeholder="Username">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="offset-md-4 col-md-8">
+                    <label class="form-control-label" style="color: white;">Password</label>
+                    <input type="text" class="form-control" placeholder="Password">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="offset-md-4 col-md-8">
+                    <label class="form-control-label" style="color: white;">Confirm-Password</label>
+                      <input type="text" class="form-control" placeholder="ConfirmPassword">
+                  </div> 
+                </div>
+                <div class="form-group row">
+                  <div class="offset-md-4 col-md-8">
+                    <label class="form-control-label" style="color: white;">Bird Day</label>
+                            <input type="date" class="form-control" placeholder="Bird-Day">
+                   </div> 
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div class="col-md-12">
+                  <H4 align="center" style="color: white;">Sign up With</H4>
+                </div>
+                <br>
+                <br>
+                <div class="col-md-12">
+                  <div class="col-md-12">
+                    <div class="col-md-12" align="center">
+                      <img src="../../assets/img/facebook.png"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <img src="../../assets/img/google-plus.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="offset-md-2 col-md-10">
+                <nb-checkbox>
+                  <a style="color: white;">I agree to understand DoLaws Terms of Use & Privacy Policy.
+                    <br>I also acknowledge that DoLaws post will not form an attorney-client relationship: that happens later.</a>
+                </nb-checkbox>
+              </div>
+            </div>
+            <div class="offset-md-4 col-md-10" style="margin-top: 20px;">
+              <button type="submit" class="btn btn-success block" (click)="sign()" style="width: 400px;">
+                <h5 style="color: white">Sign Up</h5>
+              </button>
+            </div>
+            <br>
+          </div>
+        </div>
+      </nb-card-body>
