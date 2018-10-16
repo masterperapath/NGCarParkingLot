@@ -132,6 +132,10 @@
 
     }
   }
+  .main-content {
+    background-image: url('assets/img/bg_landing.jpg');
+    background-size: cover;
+  }
 
   @include media-breakpoint-down(sm) {
 

@@ -1,12 +1,13 @@
-<h1>Sign-up</h1>
+<!-- <h1>Sign-up</h1>
 <div>
         <button class="btn btn-danger" type="button" (click)="relanding()">Return Landing</button>
-       </div>
+       </div> -->
 
        <!--  -->
 
        <nb-card-body>
-        <div class="page-header" data-parallax="true" style="background-color: gray">
+         <div class="bg"></div>
+        <div class="page-header" data-parallax="true">
           <div class="card-bg ">
             <br>
             <div class="form-group row">
@@ -20,21 +21,29 @@
                   <div class="offset-md-4 col-md-8">
                     <label class="form-control-label" style="color: white;">Username</label>
                     <div class="input-group has-person-icon">
-                      <input type="text" class="form-control" placeholder="Username">
+                      <input type="text" class="form-control" placeholder="Username" autocomplete="off">
                     </div>
                   </div>
                 </div>
                 <div class="form-group row">
                   <div class="offset-md-4 col-md-8">
                     <label class="form-control-label" style="color: white;">Password</label>
-                    <input type="text" class="form-control" placeholder="Password">
+                    <input type="password" class="form-control" placeholder="Password">
                   </div>
                 </div>
                 <div class="form-group row">
                   <div class="offset-md-4 col-md-8">
-                    <label class="form-control-label" style="color: white;">Confirm-Password</label>
-                      <input type="text" class="form-control" placeholder="ConfirmPassword">
+                    <label class="form-control-label" style="color: white;">Confirm Password</label>
+                      <input type="password" class="form-control" placeholder="ConfirmPassword">
                   </div> 
+                </div>
+                <div class="form-group row">
+                  <div class="offset-md-4 col-md-8">
+                    <label class="form-control-label" style="color: white;">E-Mail</label>
+                    <div class="input-group has-person-icon">
+                      <input type="text" class="form-control" placeholder="E-mail" autocomplete="off">
+                    </div>
+                  </div>
                 </div>
                 <div class="form-group row">
                   <div class="offset-md-4 col-md-8">
@@ -42,6 +51,7 @@
                             <input type="date" class="form-control" placeholder="Bird-Day">
                    </div> 
                 </div>
+
               </div>
               <div class="col-md-5">
                 <div class="col-md-12">

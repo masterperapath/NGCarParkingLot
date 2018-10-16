@@ -22,4 +22,8 @@ export class LoginComponent implements OnInit {
   relanding(){
     this.router.navigateByUrl("/landing");
   }
+
+  Confirm(){
+    this.router.navigateByUrl("/pages/dashboard");
+  }
 }
