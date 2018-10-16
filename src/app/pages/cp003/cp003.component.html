@@ -1,1 +1,35 @@
-<h1>Hello World cp003</h1>
+<nb-card class="shadow ">
+  <nb-card-header class="btn-type-bg text-center">
+    <h1 style="color:#fff">{{title}}</h1><br>
+    <h4 class="white-text">{{lotType}}</h4>
+  </nb-card-header>
+  <nb-card-body>
+    <div class="row">
+      <div class="col-md-6">
+        <img src="../../../assets/images/parking-lot.jpg" alt="parking-lot">
+      </div>
+      <div class="col-md-6">
+        <form class="form-control-group">
+          <h3>ทำการจอง</h3>
+          <div class="row">
+            <div class="col-md-8 offset-2">
+                <!-- <ng-datepicker [(ngModel)]="date" /> -->
+              <input type="date" placeholder="ช่องนี้ใส่อะไร" class="">
+              <input type="text" placeholder="ช่องนี้ด้วย" class="">
+            </div>
+          </div>
+          <br>
+          <h3>ระยะเวลาในการจอง 2 ชั่วโมง</h3>
+          <div class="row">
+            <div class="col-md-8 offset-2">
+              <input type="text" placeholder="ช่องนี้ใส่อะไร" class="effect-2">
+              <span class="focus-border"></span>
+              <button type="button" class="btn btn-primary">ยืนยันการจอง</button>
+            </div>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </nb-card-body>
+</nb-card>
