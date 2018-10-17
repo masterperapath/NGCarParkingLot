@@ -31,4 +31,9 @@ export class DashboardComponent implements OnInit {
   relanding(){
     this.router.navigateByUrl("/landing");
   }
+
+  carparking(){
+    this.router.navigateByUrl("/pages/cp002");
+  }
+
 }

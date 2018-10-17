@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 // import { NbButtonComponent } from "@nebular/theme/components/button/button.component";
 
 var objToday = new Date(),
@@ -20,11 +21,23 @@ var today = "วัน"+dayOfWeek+" ที่ "+dayOfMonth+" "  + " " + curMonth
   templateUrl: './cp002.component.html',
   styleUrls: ['./cp002.component.scss'],
 })
-export class Cp002Component {
+export class Cp002Component implements OnInit {
   title = 'MasterPerapathKanthongCp002Component';
   headerText = 'เลือกประเภทที่จอดรถสำหรับคนจริง';
   // displayDate = new Date().toLocaleDateString();
   displayDate = today;
+
+  constructor(private router: Router) {
+
+  }
+  ngOnInit() {
+
+  }
+
+  general() {
+    this.router.navigateByUrl("/pages/cp003");
+    }
+
 }
 
 
