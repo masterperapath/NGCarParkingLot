@@ -9,19 +9,24 @@ export const MENU_ITEMS: NbMenuItem[] = [
   },
   {
     title: 'Dashboard',
-    icon: 'nb-home',
+    icon: 'fas fa-home',
     link: '/pages/dashboard',
     home: true,
   },
   {
     title: 'Profile',
-    icon: 'nb-person',
+    icon: 'fas fa-user-alt',
     // link: '/pages/iot-dashboard',
   },
   {
     title: 'เลือกระบบการจอง',
     icon: 'fa fa-car',
     link: '/pages/cp002',
+  },
+  {
+    title: 'ประวัติการจอง',
+    icon: 'fas fa-history',
+    link: '/pages/cp009',
   },
   // {
   //   title: 'Menu',
