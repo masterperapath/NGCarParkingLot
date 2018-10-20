@@ -17,7 +17,9 @@ export class HeaderComponent implements OnInit {
 
   user: any;
 
-  userMenu = [{ title: 'Profile' }, { title: 'Log out' }];
+  userMenu = [{ title: 'Profile' }, 
+              { title: 'Log out',
+                link: '/landing', },];
 
   constructor(private sidebarService: NbSidebarService,
               private menuService: NbMenuService,
@@ -46,7 +48,8 @@ export class HeaderComponent implements OnInit {
   }
 
   goToHome() {
-    this.menuService.navigateHome();
+    // this.menuService.navigateHome();
+    this.router.navigateByUrl('pages/dashboard');
   }
 
   startSearch() {

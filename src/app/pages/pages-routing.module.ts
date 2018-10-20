@@ -9,7 +9,8 @@ import { Cp002Component } from './cp002/cp002.component';
 import { Cp003Component } from './cp003/cp003.component';
 import { Cp004Component } from './cp004/cp004.component';
 import { Cp005Component } from './cp005/cp005.component';
-import { CP006Component } from './cp006/cp006.component';
+import { Cp006Component } from './cp006/cp006.component';
+import { Cp007Component } from './cp007/cp007.component';
 
 const routes: Routes = [{
   path: '',
@@ -34,8 +35,12 @@ const routes: Routes = [{
     component: Cp005Component,
   }, {
     path: 'cp006',
-    component: CP006Component,
-  }, {
+    component: Cp006Component,
+  },{
+    path: 'cp007',
+    component: Cp007Component,
+  },
+   {
     path: '',
     redirectTo: 'dashboard',
     pathMatch: 'full',
