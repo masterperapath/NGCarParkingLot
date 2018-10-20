@@ -10,7 +10,7 @@ import { DatepickerOptions  } from 'ng2-datepicker';
   styleUrls: ['./cp003.component.scss'],
 })
 export class Cp003Component implements OnInit {
-  title = 'ที่จอดรถคนจริง';
+  title = 'ระบบจองที่จอดรถ';
   lotType = 'General';
   options: DatepickerOptions = {
     minYear: 1970,

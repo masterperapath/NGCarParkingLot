@@ -38,6 +38,14 @@ export class Cp002Component implements OnInit {
     this.router.navigateByUrl("/pages/cp003");
     }
 
+    defective() {
+      this.router.navigateByUrl("/pages/cp006");
+    }
+  
+    vip() {
+      this.router.navigateByUrl("/pages/cp007");
+    }  
+
 }
 
 

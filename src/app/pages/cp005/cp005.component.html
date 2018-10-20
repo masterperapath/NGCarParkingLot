@@ -1,5 +1,6 @@
 <nb-card>
   <nb-card-header class="btn-type-bg">
+      <toaster-container [toasterconfig]="config"></toaster-container>
     <h1 class="white-text"><i class="fa fa-check"></i> {{titleStatus}}</h1>
   </nb-card-header>
 </nb-card>
@@ -28,7 +29,7 @@
       <nb-card-body>
         <div class="qrCode">
           <img src="../../../assets/images/qrcode.png" alt="QRCode">
-          <button class="btn btn-full-width btn-success">Save QR Code</button>
+          <button class="btn btn-full-width btn-success" (click)="makeToast()">Save QR Code</button>
         </div>
       </nb-card-body>
     </nb-card>

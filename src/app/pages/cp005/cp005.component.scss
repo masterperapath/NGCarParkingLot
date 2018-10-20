@@ -1,6 +1,9 @@
 //@import '../cp002/cp002.component.scss';
 @import '../cp003/cp003.component.scss';
 
+@import '../../@theme/styles/themes';
+@import '~bootstrap/scss/mixins/breakpoints';
+@import '~@nebular/theme/styles/global/breakpoints';    
 
 h1 {
     text-align: center;
@@ -31,3 +34,29 @@ h1 {
 // nb-card.no-padding nb-card-body {
 //     //padding: 0;
 // }
+
+
+
+    nb-card-footer {
+      padding-bottom: 0.25rem;
+  
+    //   button {
+    //     @include nb-ltr(margin, 0 1rem 1rem 0);
+    //     @include nb-rtl(margin, 0 0 1rem 1rem);
+    //   }
+    }
+  
+    /* stylelint-disable */
+    toaster-container /deep/ {
+      #toast-container .toast-close-button {
+        right: 0;
+      }
+    }
+    /* stylelint-enable */
+  
+    // @include media-breakpoint-down(xs) {
+    //   .dropdown-toggle {
+    //     font-size: 0.75rem;
+    //   }
+    // }
+  

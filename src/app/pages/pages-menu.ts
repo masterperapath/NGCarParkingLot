@@ -19,41 +19,46 @@ export const MENU_ITEMS: NbMenuItem[] = [
     // link: '/pages/iot-dashboard',
   },
   {
-    title: 'Menu',
-    group: true,
+    title: 'เลือกระบบการจอง',
+    icon: 'fa fa-car',
+    link: '/pages/cp002',
   },
-  {
-    title: 'Menu หลัก'
-    ,
-    icon: 'nb-keypad',
-    link: '/pages/ui-features',
-    children: [
-      // {
-      //   title: 'cp001',
-      //   link: '/pages/cp001',
-      // },
-      {
-        title: 'เลือกระบบการจอง',
-        link: '/pages/cp002',
-      },
-      {
-        title: 'ทำการจองด้วยระบบGeneral',
-        link: '/pages/cp003',
-      },
-      {
-        title: 'ชำระเงิน',
-        link: '/pages/cp004',
-      },
-      {
-        title: 'ออกใบเสร็จ',
-        link: '/pages/cp005',
-      },
-      // {
-      //   title: 'cp006',
-      //   link: '/pages/cp006',
-      // },
-    ],
-  },
+  // {
+  //   title: 'Menu',
+  //   group: true,
+  // },
+  // {
+  //   title: 'Menu หลัก'
+  //   ,
+  //   icon: 'nb-keypad',
+  //   link: '/pages/ui-features',
+  //   children: [
+  //     // {
+  //     //   title: 'cp001',
+  //     //   link: '/pages/cp001',
+  //     // },
+  //     {
+  //       title: 'เลือกระบบการจอง',
+  //       link: '/pages/cp002',
+  //     },
+  //     {
+  //       title: 'ทำการจองด้วยระบบGeneral',
+  //       link: '/pages/cp003',
+  //     },
+  //     {
+  //       title: 'ชำระเงิน',
+  //       link: '/pages/cp004',
+  //     },
+  //     {
+  //       title: 'ออกใบเสร็จ',
+  //       link: '/pages/cp005',
+  //     },
+  //     // {
+  //     //   title: 'cp006',
+  //     //   link: '/pages/cp006',
+  //     // },
+  //   ],
+  // },
   // {
   //   title: 'Auth',
   //   icon: 'nb-locked',

@@ -5,14 +5,13 @@ import * as frLocale from 'date-fns/locale/fr';
 import { DatepickerOptions  } from 'ng2-datepicker';
 
 @Component({
-    selector: 'ngx-cp006',
-    templateUrl: './cp006.component.html',
-    styleUrls: ['./cp006.component.scss']
+  selector: 'ngx-cp007',
+  templateUrl: './cp007.component.html',
+  styleUrls: ['./cp007.component.scss'],
 })
-
-export class Cp006Component  {
-    title = 'ระบบจองที่จอดรถ';
-  lotType = 'ผู้พิการ';
+export class Cp007Component implements OnInit {
+  title = 'ระบบจองที่จอดรถ';
+  lotType = 'VIP';
   options: DatepickerOptions = {
     minYear: 1970,
     maxYear: 2030,
@@ -42,3 +41,4 @@ export class Cp006Component  {
     this.router.navigateByUrl("/pages/cp004");
   }
 }
+
