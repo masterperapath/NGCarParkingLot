@@ -31,6 +31,7 @@ export class ModalComponent {
 
   Confirm(){
     this.router.navigateByUrl("/pages/dashboard");
+    this.activeModal.close();
   }
 
   closeModal() {
