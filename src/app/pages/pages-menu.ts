@@ -8,7 +8,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
     
   },
   {
-    title: 'Dashboard',
+    title: ' หน้าแรก',
     icon: 'fas fa-home',
     link: '/pages/dashboard',
     home: true,

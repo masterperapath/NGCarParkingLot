@@ -36,4 +36,8 @@ export class DashboardComponent implements OnInit {
     this.router.navigateByUrl("/pages/cp002");
   }
 
+  history() {
+    this.router.navigateByUrl("/pages/cp009");
+  }
+
 }
