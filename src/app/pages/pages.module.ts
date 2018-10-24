@@ -1,5 +1,6 @@
 //import Library
 import { NgModule } from '@angular/core';
+import { FormGroup, FormControl, Validators, FormControlName, FormsModule } from '@angular/forms';
 import { PagesComponent } from './pages.component';
 import { PagesRoutingModule } from './pages-routing.module';
 import { ThemeModule } from '../@theme/theme.module';
@@ -45,6 +46,7 @@ const PAGES_COMPONENTS = [
     ToasterModule.forRoot(),
     // TablesRoutingModule,
     Ng2SmartTableModule,
+    FormsModule,
     
   ],
   declarations: [
