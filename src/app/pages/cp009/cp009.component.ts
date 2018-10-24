@@ -25,6 +25,12 @@ import { SmartTableService } from '../../@core/data/smart-table.service';
       source: LocalDataSource = new LocalDataSource();
 
       settings = {
+        pager: {
+          display: true,
+        },
+        actions: {
+          delete: false, add: false, edit: false
+        },
         add: {
           addButtonContent: '<i class="nb-plus"></i>',
           createButtonContent: '<i class="nb-checkmark"></i>',
@@ -43,26 +49,32 @@ import { SmartTableService } from '../../@core/data/smart-table.service';
           id: {
             title: 'ID',
             type: 'number',
+            filter: false,
           },
           firstName: {
             title: 'First Name',
             type: 'string',
+            filter: false,
           },
           lastName: {
             title: 'Last Name',
             type: 'string',
+            filter: false,
           },
           username: {
             title: 'Username',
             type: 'string',
+            filter: false,
           },
           email: {
             title: 'E-mail',
             type: 'string',
+            filter: false,
           },
           age: {
             title: 'Age',
             type: 'number',
+            filter: false,
           },
         },
       };
