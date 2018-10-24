@@ -52,15 +52,13 @@
     }
 
     /deep/ .main-container {
-      height:
-        calc(#{nb-theme(sidebar-height)} - #{nb-theme(header-height)} - #{nb-theme(sidebar-header-gap)}) !important;
+      height: calc(#{nb-theme(sidebar-height)} - #{nb-theme(header-height)} - #{nb-theme(sidebar-header-gap)}) !important;
       @include nb-ltr(border-top-right-radius, nb-theme(radius));
       @include nb-rtl(border-top-left-radius, nb-theme(radius));
 
       @include nb-for-theme(corporate) {
         border: 1px solid nb-theme(separator);
-        height:
-          calc(#{nb-theme(sidebar-height)} - #{nb-theme(header-height)}) !important;
+        height: calc(#{nb-theme(sidebar-height)} - #{nb-theme(header-height)}) !important;
       }
     }
 
@@ -95,12 +93,14 @@
         font-size: 2rem;
         text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
       }
+
       span {
         @include nb-ltr(padding-left, 0.25rem);
         @include nb-rtl(padding-right, 0.25rem);
       }
 
-      i, span {
+      i,
+      span {
         vertical-align: middle;
       }
     }
@@ -132,10 +132,6 @@
 
     }
   }
-  .main-content {
-    background-image: url('assets/img/bg_landing.jpg');
-    background-size: cover;
-  }
 
   @include media-breakpoint-down(sm) {
 
@@ -158,4 +154,18 @@
       display: none;
     }
   }
+}
+
+// ! Wallpaper Landing Page
+// .main-content {
+//   background-image: url('assets/img/bg_landing.jpg');
+//   background-size: cover;
+// }
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
 }

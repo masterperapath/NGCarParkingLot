@@ -1,7 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Router } from '@angular/router';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { WINDOW } from "../../@theme/layouts/landing/window.service";
+import { Component, OnInit, Input } from '@angular/core'                              ;
+import { Router                   } from '@angular/router'                            ;
+import { NgbModal                 } from '@ng-bootstrap/ng-bootstrap'                 ;
+import { WINDOW                   } from "../../@theme/layouts/landing/window.service";
 
 @Component({
   selector: 'ngx-landing',
