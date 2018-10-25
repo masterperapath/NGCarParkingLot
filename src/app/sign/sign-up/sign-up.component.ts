@@ -9,10 +9,15 @@ import { Router } from '@angular/router';
 export class SignUpComponent implements OnInit {
   title = 'SignupComponent';
 
+  username : any;
+
   constructor(private router: Router) {
 
   }
   ngOnInit() {
+    if (this.username = ''){
+      alert("แจ้งเตือน");
+    }
 
   }
 
