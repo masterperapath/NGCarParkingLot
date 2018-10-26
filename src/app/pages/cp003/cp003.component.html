@@ -1,4 +1,43 @@
-<nb-card class="shadow ">
+<!-- <div class="row">
+  <div class="col-md-12 card">
+
+  </div>
+</div> -->
+
+<div class="movie_card">
+  <div class="info_section">
+    <div class="movie_header">
+      <h1><b>{{title}}</b></h1>
+      <h4><b>ประเภท: </b>{{lotType}}</h4>
+    </div>
+    <div class="movie_desc">
+      <form class="form-control-group">
+        <h4>ทำการจอง</h4>
+        <div class="row">
+          <div class="col-md-8 offset-2">
+            <!-- <ng-datepicker [(ngModel)]="date" /> -->
+            <input type="date" placeholder="ช่องนี้ใส่อะไร" class="">
+            <input type="text" placeholder="ช่องนี้ด้วย" class="">
+          </div>
+        </div>
+        <br>
+        <h4>ระยะเวลาในการจอง 2 ชั่วโมง</h4>
+        <div class="row">
+          <div class="col-md-8 offset-2">
+            <input type="text" placeholder="ช่องนี้ใส่อะไร" class="effect-2">
+            <span class="focus-border"></span>
+            <button type="button" class="btn btn-primary" (click)="confirm()">ยืนยันการจอง</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="blur_back parking_bg"></div>
+</div>
+
+
+
+<!-- <nb-card class="shadow ">
   <nb-card-header class="btn-type-bg text-center">
     <h1 style="color:#fff">{{title}}</h1><br>
     <h4 class="white-text">{{lotType}}</h4>
@@ -13,7 +52,6 @@
           <h3>ทำการจอง</h3>
           <div class="row">
             <div class="col-md-8 offset-2">
-                <!-- <ng-datepicker [(ngModel)]="date" /> -->
               <input type="date" placeholder="ช่องนี้ใส่อะไร" class="">
               <input type="text" placeholder="ช่องนี้ด้วย" class="">
             </div>
@@ -32,4 +70,4 @@
       </div>
     </div>
   </nb-card-body>
-</nb-card>
+</nb-card> -->

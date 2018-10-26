@@ -3,6 +3,9 @@
  * Copyright Akveo. All Rights Reserved.
  * Licensed under the MIT License. See License.txt in the project root for license information.
  */
+// * Generate QR Code
+import { QRCodeModule } from 'angularx-qrcode';
+
 import { APP_BASE_HREF } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -36,6 +39,7 @@ const PAGES_COMPONENTS = [
     NgbModule.forRoot(),
     ThemeModule.forRoot(),
     CoreModule.forRoot(),
+    QRCodeModule,
   ],
   bootstrap: [AppComponent],
   providers: [

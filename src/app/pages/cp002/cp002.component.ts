@@ -23,7 +23,7 @@ var today = "วัน"+dayOfWeek+" ที่ "+dayOfMonth+" "  + " " + curMonth
 })
 export class Cp002Component implements OnInit {
   title = 'MasterPerapathKanthongCp002Component';
-  headerText = 'เลือกประเภทที่จอดรถสำหรับคนจริง';
+  headerText = 'เลือกประเภทที่จอดรถ';
   // displayDate = new Date().toLocaleDateString();
   displayDate = today;
 

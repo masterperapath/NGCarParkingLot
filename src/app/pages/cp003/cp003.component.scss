@@ -1,15 +1,18 @@
-@import '../cp002/cp002.component.scss';
+//@import '../cp002/cp002.component.scss';
 
 .btn-type-bg {
   padding: 3rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("../../../assets/images/bg-header.jpg");
+  object-fit: scale-down;
 }
 
-div img {
-  //object-fit: scale-down;
-  width: 100%;
-}
+// div img {
+//   //object-fit: scale-down;
+//   width: 100%;
+// }
 
-input[type="text"] {
+input[type="text"],input[type="date"] {
   display: block;
   margin: 1rem auto;
   outline: none;
@@ -23,7 +26,7 @@ input[type="text"] {
   //border: none;
 }
 
-input[type="text"]:focus {
+input[type="text"]:focus,input[type="date"]:focus {
   border: 2px solid #fff;
   border-bottom: 2px solid #006eff;
   transition: 0.4s;
@@ -33,24 +36,168 @@ button[type="button"] {
   float: right;
 }
 
-// .effect-2 {
-//   border: 0;
-//   padding: 7px 0;
-//   border-bottom: 1px solid #ccc;
+// .card {
+//   // width: 220px;
+//   margin-bottom: 1rem;
+//   height: 321px;
+//   background: #fff;
+//   border-radius: 10px;
+//   overflow: hidden;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   position: relative;
+//   box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04);
+//   transition: all 0.3s ease-out;
+//   text-decoration: none;
 // }
 
-// .effect-2~.focus-border {
-//   position: absolute;
-//   bottom: 0;
-//   left: 50%;
-//   width: 0;
-//   height: 2px;
-//   background-color: #4caf50;
-//   transition: 0.4s;
-// }
+.movie_card{
+  position: relative;
+  display: block;
+  // width: 800px;
+  // height: 350px;
+  // margin: 80px auto; 
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.4s;
+  box-shadow: 0px 0px 120px -25px rgba(0,0,0, 0.5);
+  // &:hover{
+  //   transform: scale(1.02);
+  //   box-shadow: 0px 0px 80px -25px rgba(0,0,0, 0.5);
+  //   transition: all 0.4s;
+  // }
+  .info_section{
+    position: relative;
+    width: 100%;
+    height: 100%;
+	  background-blend-mode: multiply;
+    z-index: 2;
+    border-radius: 10px;
+    .movie_header{
+      position: relative;
+      padding: 25px;
+      height: 40%;
+      h1{
+        color: black;
+        font-weight: 400;
+      }
+      h4{
+        color: #555;
+        font-weight: 400;
+      }
+      .minutes{
+        display: inline-block;
+        margin-top: 15px;
+        color: #555;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid rgba(0,0,0,0.05);
+      }
+      .type{
+        display: inline-block;
+        color: #959595;
+        margin-left: 10px;
+      }
+      .locandina{
+        position: relative;
+        float: left;
+        margin-right: 20px;
+        height: 120px;
+        box-shadow: 0 0 20px -10px rgba(0,0,0,0.5);
+      }
+    }
+    .movie_desc{
+      padding: 25px;
+      height: 50%;
+      .text{
+        color: #545454;
+      }
+    }
+    .movie_social{
+      height: 10%;
+      padding-left: 15px;
+      padding-bottom: 20px;
+      ul{
+        list-style: none;
+        padding: 0;
+        li{
+          display: inline-block;
+          color: rgba(0,0,0,0.3);
+          transition: color 0.3s;
+          transition-delay: 0.15s;
+          margin: 0 10px;
+          &:hover{
+            transition: color 0.3s;
+            color: rgba(0,0,0,0.7);
+          }
+          i{
+            font-size: 19px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  .blur_back{
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    height: 100%; right: 0;
+    background-size: cover;
+    border-radius: 11px;
+  }
+}
 
-// .effect-2:focus~.focus-border {
-//   width: 100%;
-//   transition: 0.4s;
-//   left: 0;
-// }
+@media screen and (min-width: 768px) {
+  .movie_header{
+    width: 65%;
+  }
+  
+  .movie_desc{
+    width: 50%;
+  }
+  
+  .info_section{
+    background: linear-gradient(to right, #fff 50%, transparent 100%);
+  }
+  
+  .blur_back{
+    width: 80%;
+    background-position: -100% 10% !important;  
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .movie_card{
+    width: 95%;
+    margin: 70px auto; 
+    min-height: 350px;
+    height: auto;
+  }
+  
+  .blur_back{
+    width: 100%;
+    background-position: 50% 50% !important;  
+  }
+  
+  .movie_header{
+    width: 100%;
+    margin-top: 85px;
+  }
+  
+  .movie_desc{
+    width: 100%;
+  }
+  
+  .info_section{
+    background: linear-gradient(to top, #fff 50%, transparent 100%);
+    display: inline-grid;
+  }
+}
+
+
+.parking_bg {
+  background: url("../../../assets/images/parking-lot.jpg");
+}

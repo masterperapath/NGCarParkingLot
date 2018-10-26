@@ -10,9 +10,10 @@ import { WINDOW                   } from "../../@theme/layouts/landing/window.se
 })
 export class LandingComponent implements OnInit {
   title = 'LandingComponent';
-
+  public myAngularxQrCode: string = null;
+  
   constructor(private router: Router) {
-
+    this.myAngularxQrCode = 'Your QR code data string';
   }
 
   ngOnInit() {
