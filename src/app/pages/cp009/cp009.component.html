@@ -1,5 +1,5 @@
 
-<nb-card>
+<!-- <nb-card>
         <nb-card-header>
           ประวัติการจองที่จอดรถ
         </nb-card-header>
@@ -8,4 +8,22 @@
           <ng2-smart-table [settings]="settings" [source]="source" (deleteConfirm)="onDeleteConfirm($event)">
           </ng2-smart-table>
         </nb-card-body>
-      </nb-card>
+      </nb-card> -->
+
+
+
+      <div class="movie_card">
+          <div class="info_section">
+            <div class="movie_header">
+              <h1><b>{{title}}</b></h1>
+              <!-- <h4><b>ประเภท: </b>{{lotType}}</h4> -->
+            </div>
+            <div class="movie_desc">
+              <form class="form-control-group">
+                  <ng2-smart-table [settings]="settings" [source]="source" (deleteConfirm)="onDeleteConfirm($event)">
+                    </ng2-smart-table>
+              </form>
+            </div>
+          </div>
+          <div class="blur_back parking_bg"></div>
+        </div>
