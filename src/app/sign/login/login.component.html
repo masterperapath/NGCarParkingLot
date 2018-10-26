@@ -1,69 +1,73 @@
-
+<!-- 
  <h1>Login</h1>
 
  <div>
     <button class="btn btn-danger" type="button" (click)="relanding()">Return Landing</button>
-   </div>
+   </div> -->
 
 
-<nb-card-body>
+<!-- <nb-card>
+<nb-card-body> -->
 
-  <div class="page-header" data-parallax="true">
-      <div class="card-bg">
-          <div class="form-group row">
-              <div class="col-md-12" style="text-align: center;">
-                  <br>
-                  <h2 class="form-control-label" style="color: white;">Log in to Your Account</h2>
-              </div>
-          </div>
-          <div class="form-group row">
-              <div class="col-md-6" style="border-right:solid">
-                  <div class="form-group row">
-                      <div class="offset-md-4 col-md-8">
-                          <label class="form-control-label" style="color: white;">Username</label>
-                          <div class="input-group has-person-icon">
-                              <input type="text"(keydown) ="submitOnEnter($event)" class="form-control" id="name" [(ngModel)]="value" placeholder="Username">
-                          </div>
-                      </div>
-                  </div>
-                  <div class="form-group row">
-                      <div class="offset-md-4 col-md-8">
-                          <label class="form-control-label" style="color: white;">Password</label>
-                          <input type="password" class="form-control" placeholder="Password">
-                      </div>
-                  </div>
-                  <div class="form-group row">
-                      <div class="offset-md-4 col-md-4 validation-checkboxes">
-                          <nb-checkbox status="success" style="color: white;">
-                              <a style="color: white;">Remember Me</a>
-                          </nb-checkbox>
-                      </div>
-                      <div class="col-md-4">
-                          <a href="http://localhost:4200/#/sign/forgot" class="alert-link" style="color: white;">Forget your password?</a>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-md-5">
-                  <div class="col-md-12">
-                      <H4 align="center" style="color: white;">Log in With</H4>
-                  </div>
-                  <br>
-                  <br>
-                  <div class="col-md-12">
-                      <div class="col-md-12" align="center">
-                          <img src="../../assets/img/facebook.png"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                          <img src="../../assets/img/google-plus.png">
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div class="offset-md-4 col-md-10" style="margin-top: 20px;">
-              <button type="submit" class="btn btn-success block" style="width: 400px;" (click)="Confirm()">
-                  <h5 style="color: white">Login</h5>
-              </button>
-          </div>
-          <br>
+<div class="page-header" data-parallax="true">
+  <div class="card-bg">
+    <div class="form-group row">
+      <div class="col-md-12" style="text-align: center;">
+        <br>
+        <h2 class="form-control-label" style="color: white;">Log in to Your Account</h2>
       </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-md-6" style="border-right:solid">
+        <div class="form-group row">
+          <div class="offset-md-4 col-md-8">
+            <label class="form-control-label" style="color: white;">Username</label>
+            <div class="input-group has-person-icon">
+              <input type="text" (keydown)="submitOnEnter($event)" class="form-control" id="name" [(ngModel)]="value"
+                placeholder="Username">
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="offset-md-4 col-md-8">
+            <label class="form-control-label" style="color: white;">Password</label>
+            <input type="password" class="form-control" placeholder="Password">
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="offset-md-4 col-md-3 validation-checkboxes">
+            <nb-checkbox status="success" style="color: white;">
+              <a style="color: white;">Remember Me</a>
+            </nb-checkbox>
+          </div>
+          <div class="col-md-5" style="text-align: right">
+            <a href="http://localhost:4200/#/sign/forgot" class="alert-link" style="color: white;">Forget password?</a>
+            <label> or </label>
+            <a href="http://localhost:4200/#/sign/sign-up" class="alert-link" style="color: white;">Register</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="col-md-12">
+          <H4 align="center" style="color: white;">Log in With</H4>
+        </div>
+        <br>
+        <br>
+        <div class="col-md-12">
+          <div class="col-md-12" align="center">
+            <img src="../../assets/img/facebook.png"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="../../assets/img/google-plus.png">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="offset-md-4 col-md-10" style="margin-top: 20px;">
+      <button type="submit" class="btn btn-success block" style="width: 400px;" (click)="Confirm()">
+        <h5 style="color: white">Login</h5>
+      </button>
+    </div>
+    <br>
   </div>
-</nb-card-body>
-
+</div>
+<!-- </nb-card-body>
+</nb-card> -->
