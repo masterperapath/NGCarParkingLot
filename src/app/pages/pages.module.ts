@@ -9,8 +9,13 @@ import { Ng2SmartTableModule } from 'ng2-smart-table';
 // import { TablesRoutingModule, routedComponents } from './tables-routing.module';
 import { SmartTableService } from '../@core/data/smart-table.service';
 
+//QRCode
+import { NgxQRCodeModule } from 'ngx-qrcode2';
+import { QRCodeModule } from 'angularx-qrcode';
+
 //import Sub_Page
 import { ModalComponent } from './cp005/modalalert/modalalert.component';
+import { QRcodeComponent } from './cp005/qrcode/qrcode.component';
 
 //import Page
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -37,6 +42,7 @@ const PAGES_COMPONENTS = [
   Cp008Component,
   Cp009Component,
   ModalComponent,
+  QRcodeComponent,
 ];
 
 @NgModule({
@@ -47,6 +53,8 @@ const PAGES_COMPONENTS = [
     // TablesRoutingModule,
     Ng2SmartTableModule,
     FormsModule,
+    NgxQRCodeModule,
+    QRCodeModule,
     
   ],
   declarations: [

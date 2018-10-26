@@ -6,8 +6,12 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 import { ModalComponent } from './modalalert/modalalert.component';
 
+//QRCode
+import { NgxQRCodeModule } from 'ngx-qrcode2';  
+import { QRcodeComponent } from './qrcode/qrcode.component';
 
 import 'style-loader!angular2-toaster/toaster.css';
+import { ReadPropExpr } from '@angular/compiler';
 
 var status = 'การชำระเงินสำเร็จ';
 
@@ -24,6 +28,7 @@ constructor(private toasterService: ToasterService,
             private modalService: NgbModal,){
 
 }
+ngxQrcode2    = 'https://www.npmjs.com/package/ngx-qrcode2';
 
 position = 'toast-top-right';
 animationType = 'fade';
