@@ -1,23 +1,31 @@
 <div class="bg-landing"></div>
 <div class="wrapper landing-content">
   <div class="nav">
-    <div class="logo">
-      <!-- LOGO -->
-      <img src="../../../assets/img/central-text-logo.png" alt="Central Plaza">
-    </div>
-    <div class="menu">
-      <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="">Location</a></li>
-        <li><a href="">Contact</a></li>
-        <li><a href="">Register</a></li>
-      </ul>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="logo">
+          <!-- LOGO -->
+          <img src="../../../assets/img/central-text-logo.png" alt="Central Plaza">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="menu">
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="#">Location</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a (click)="signup()">Register</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
   <div class="header">
     <h1>Central Plaza Parking Reserved</h1>
     <p>Central Plaza Chaengwattana</p>
-    <button type="button">View Details</button>
+    <button type="button" (click)="dashboard()">Dashboard</button>
+    <button type="button" (click)="login()">ทำการจอง</button>
+    <!-- <qrcode [qrdata]="myAngularxQrCode" [size]="256" [level]="'M'"></qrcode> -->
   </div>
 </div>
 

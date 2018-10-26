@@ -1,22 +1,86 @@
+<!-- <div class="card-title lot-type">
+  <h1 class="headerText" style="color:#fff">{{headerText}}</h1>
+</div> -->
+
 <nb-card status="info" class="shadow btn-type-bg">
   <nb-card-header>
     <h1 style="color:#fff">{{headerText}}</h1>
   </nb-card-header>
-  <nb-card-body>
-    <div class="lot-type-btn">
-      <button class="btn btn-general btn-hero" type="button" (click)="general()">General</button>
-      <button class="btn btn-dis" type="button" (click)="defective()">สำหรับผู้พิการ</button>
-      <button class="btn btn-vip" type="button" (click)="vip()">VIP</button>
-    </div>
-  </nb-card-body>
 </nb-card>
+
+<!-- <div class="row">
+  <div class="col-md-4 cards">
+    <div class="card lot-type-card general-card">
+      <div class="card__info-hover">
+      </div>
+      <div class="card__img"></div>
+      <a href="#" class="card_link">
+        <div class="card__img--hover"></div>
+      </a>
+      <div class="card__info">
+        <h3 class="card__title">Crisp Spanish tortilla Matzo brei</h3>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card lot-type-card disabled-card">
+
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card lot-type-card vip-card">
+
+    </div>
+  </div>
+</div> -->
+
+<div class="cards box-center">
+  <div class="card card--1">
+    <div class="card__info-hover">
+    </div>
+    <div class="card__img"></div>
+    <a (click)="general()" class="card_link">
+      <div class="card__img--hover"></div>
+    </a>
+    <div class="card__info">
+      <h3 class="card__title">ธรรมดา</h3>
+    </div>
+  </div>
+  <div class="card card--2">
+    <div class="card__info-hover">
+    </div>
+    <div class="card__img"></div>
+    <a (click)="vip()" class="card_link">
+      <div class="card__img--hover"></div>
+    </a>
+    <div class="card__info">
+      <h3 class="card__title">VIP</h3>
+    </div>
+  </div>
+  <div class="card card--3">
+    <div class="card__info-hover">
+    </div>
+    <div class="card__img"></div>
+    <a (click)="defective()" class="card_link">
+      <div class="card__img--hover"></div>
+    </a>
+    <div class="card__info">
+      <h3 class="card__title">สำหรับผู้พิการ</h3>
+    </div>
+  </div>
+</div>
+
+<br />
+<br />
 
 <div class="row">
   <div class="col-md-4">
     <nb-card size="'medium'" status="danger" class="shadow" style="width:100%;">
-      <nb-card-header style="text-align:center;color: #fff">กติกาของคนจริง</nb-card-header>
+      <nb-card-header style="text-align:center;color: #fff">กติกาในการจองที่จอดรถ</nb-card-header>
       <nb-card-body>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nobis illo quas deleniti doloribus error nemo maxime. Nulla velit, doloremque molestias laudantium possimus eos accusantium! Facilis tenetur nisi enim voluptas!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nobis illo quas deleniti doloribus error
+        nemo maxime. Nulla velit, doloremque molestias laudantium possimus eos accusantium! Facilis tenetur nisi enim
+        voluptas!
       </nb-card-body>
     </nb-card>
   </div>
@@ -25,20 +89,26 @@
       <nb-card-header style="text-align:right">
         {{displayDate}}
         <hr style="width:100%;height:0.1rem;background-color:#ba7fec">
-      </nb-card-header>      
+      </nb-card-header>
       <nb-card-body>
         <div class="row">
-          <div class="col-md-4"><h5>General</h5></div>
+          <div class="col-md-4">
+            <h5>General</h5>
+          </div>
           <div class="col-md-4"><b>ว่าง: </b> 15</div>
           <div class="col-md-4"><b>ไม่ว่าง: </b> 200</div>
         </div>
         <div class="row">
-          <div class="col-md-4"><h5>สำหรับผู้พิการ</h5></div>
+          <div class="col-md-4">
+            <h5>สำหรับผู้พิการ</h5>
+          </div>
           <div class="col-md-4"><b>ว่าง: </b> 15</div>
           <div class="col-md-4"><b>ไม่ว่าง: </b> 200</div>
         </div>
         <div class="row">
-          <div class="col-md-4"><h5>VIP</h5></div>
+          <div class="col-md-4">
+            <h5>VIP</h5>
+          </div>
           <div class="col-md-4"><b>ว่าง: </b> 15</div>
           <div class="col-md-4"><b>ไม่ว่าง: </b> 200</div>
         </div>

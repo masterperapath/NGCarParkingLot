@@ -1,14 +1,35 @@
+<!-- <div class="row">
+  <div class="col-md-1">
+    <div>
+      <button class="btn btn-success" type="button" (click)="carparking()">เข้าสู้หน้าเลือกระบบการจองที่จองรถ</button>
+    </div>
+  </div>
+  <div class="col-md-2"></div>
+  <div class="col-md-1">
+    <div>
+      <button class="btn btn-primary" type="button" (click)="history()">ประวัติการจอง</button>
+    </div>
+  </div>
+  <div class="col-md-2"></div>
+</div> -->
+
 <div class="row">
-        <div class="col-md-1" >
-                <div>
-                        <button class="btn btn-success" type="button" (click)="carparking()">เข้าสู้หน้าเลือกระบบการจองที่จองรถ</button>
-                 </div>
-        </div>
-        <div class="col-md-2" ></div>
-        <div class="col-md-1" >
-                <div>
-                        <button class="btn btn-primary" type="button" (click)="history()">ประวัติการจอง</button>
-                 </div>
-        </div>
-        <div class="col-md-2" ></div>
+  <div class="col-md-6">
+    <div (click)="carparking()" class="card reserve">
+      <div class="overlay"></div>
+      <div class="circle">
+        <img src="../../../assets/img/reserved.png" alt="reserved">
+      </div>
+      <p><b>เลือกจองที่จองรถ</b></p>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div (click)="history()" class="card history">
+      <div class="overlay"></div>
+      <div class="circle">
+        <img src="../../../assets/img/notepad.png" alt="reserved">
+      </div>
+      <p><b>ประวัติการจอง</b></p>
+    </div>
+  </div>
 </div>
