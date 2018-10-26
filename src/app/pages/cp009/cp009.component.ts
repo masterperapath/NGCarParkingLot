@@ -12,6 +12,8 @@ import { SmartTableService } from '../../@core/data/smart-table.service';
   })
 
   export class Cp009Component implements OnInit {
+    title = 'ประวัติการจองที่จอดรถ';
+
       constructor(private router: Router,
                   private service: SmartTableService,) {
                     const data = this.service.getData();
@@ -43,38 +45,43 @@ import { SmartTableService } from '../../@core/data/smart-table.service';
         },
         delete: {
           deleteButtonContent: '<i class="nb-trash"></i>',
-          confirmDelete: true,
+          // confirmDelete: true,
         },
         columns: {
-          id: {
-            title: 'ID',
-            type: 'number',
-            filter: false,
-          },
-          firstName: {
-            title: 'First Name',
-            type: 'string',
-            filter: false,
-          },
-          lastName: {
-            title: 'Last Name',
-            type: 'string',
-            filter: false,
-          },
+          // id: {
+          //   title: 'ID',
+          //   type: 'number',
+          //   filter: false,
+          // },
+          // firstName: {
+          //   title: 'First Name',
+          //   type: 'string',
+          //   filter: false,
+          // },
+          // lastName: {
+          //   title: 'Last Name',
+          //   type: 'string',
+          //   filter: false,
+          // },
           username: {
             title: 'Username',
             type: 'string',
-            filter: false,
+            // filter: false,
+          },
+          // age: {
+          //   title: 'Age',
+          //   type: 'number',
+          //   filter: false,
+          // },
+          date: {
+            title: 'วันและเวลาที่จอง',
+            type: 'date',
+            // filter: false,
           },
           email: {
             title: 'E-mail',
             type: 'string',
-            filter: false,
-          },
-          age: {
-            title: 'Age',
-            type: 'number',
-            filter: false,
+            // filter: false,
           },
         },
       };
