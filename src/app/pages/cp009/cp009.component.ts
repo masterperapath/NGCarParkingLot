@@ -53,26 +53,11 @@ import { SmartTableService } from '../../@core/data/smart-table.service';
           //   type: 'number',
           //   filter: false,
           // },
-          // firstName: {
-          //   title: 'First Name',
-          //   type: 'string',
-          //   filter: false,
-          // },
-          // lastName: {
-          //   title: 'Last Name',
-          //   type: 'string',
-          //   filter: false,
-          // },
           username: {
             title: 'Username',
             type: 'string',
             // filter: false,
           },
-          // age: {
-          //   title: 'Age',
-          //   type: 'number',
-          //   filter: false,
-          // },
           date: {
             title: 'วันและเวลาที่จอง',
             type: 'date',
@@ -80,6 +65,11 @@ import { SmartTableService } from '../../@core/data/smart-table.service';
           },
           email: {
             title: 'E-mail',
+            type: 'string',
+            // filter: false,
+          },
+          type: {
+            title: 'ประเภทการจอง',
             type: 'string',
             // filter: false,
           },
