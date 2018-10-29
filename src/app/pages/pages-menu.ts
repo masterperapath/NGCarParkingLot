@@ -1,12 +1,12 @@
 import { NbMenuItem } from '@nebular/theme';
 
 export const MENU_ITEMS: NbMenuItem[] = [
-  {
-    title: 'Landing',
-    //icon: 'nb-home',
-    link: '/landing',
+  // {
+  //   title: 'Landing',
+  //   //icon: 'nb-home',
+  //   link: '/landing',
     
-  },
+  // },
   {
     title: 'หน้าแรก',
     icon: 'fas fa-home',
