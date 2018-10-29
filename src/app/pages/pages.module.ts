@@ -16,6 +16,7 @@ import { QRCodeModule } from 'angularx-qrcode';
 //import Sub_Page
 import { ModalComponent } from './cp005/modalalert/modalalert.component';
 import { QRcodeComponent } from './cp005/qrcode/qrcode.component';
+import { RanderNumberComponent } from './cp009/randernumber.component';
 
 //import Page
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -43,6 +44,7 @@ const PAGES_COMPONENTS = [
   Cp009Component,
   ModalComponent,
   QRcodeComponent,
+  RanderNumberComponent,
 ];
 
 @NgModule({
