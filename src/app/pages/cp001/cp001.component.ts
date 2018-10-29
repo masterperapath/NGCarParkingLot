@@ -27,16 +27,12 @@ export class Cp001Component implements OnInit {
 
   public getCustomersMysql() {
     // ! Original Code
-    // this._mysqlService.getMysqlUsersDatas()
-    //   .subscribe(
-    //     res => this.customersMysql = res,
-    //     err => console.error(err.status)
-    //   );
     this._mysqlService.getMysqlUsersDatas()
       .subscribe(
-        rep => this.customersMysql = rep,
+        res => this.customersMysql = res,
         err => console.error(err.status)
       );
+    
   }
 
   // private getUsersLocal() {

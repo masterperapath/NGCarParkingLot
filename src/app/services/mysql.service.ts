@@ -24,11 +24,16 @@ export class MysqlService {
 
   public getMysqlUsersDatas() {
     // ! Original Code
-    /*return this._http.get('http://localhost:4200/#/PHP/get_customers.php')
-    .map(rep => rep.json());*/
+    // return this._http.get('http://localhost/NGCarParkingLot/src/PHP/get_customers.php')
+    // .map(rep => rep.json());
 
-    return this._http.get('http://localhost:4200/#/PHP/get_customers.php')
-    .map((rep:Response) => rep.json());
+    return this._http.get('http://localhost/NGCarParkingLot/src/PHP/get_customers.php')
+    .map(rep => rep.json());
+
+
+    // ! Original Code that work!
+    // return this._http.get('http://localhost/NGCarParkingLot/src/PHP/get_customers.php')
+    // .map((rep:Response) => rep.json());
 
     /*return this._http.get('http://localhost:4200/#/PHP/get_customers.php')*/
     /*.do(x => console.log(x))**/
