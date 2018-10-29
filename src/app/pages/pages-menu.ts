@@ -29,6 +29,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
     link: '/pages/cp009',
   },
   // {
+  //   title: 'testDB',
+  //   icon: 'fas fa-history',
+  //   link: '../get-customers',
+  // },
+  // {
   //   title: 'Menu',
   //   group: true,
   // },

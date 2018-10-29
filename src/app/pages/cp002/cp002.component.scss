@@ -92,13 +92,18 @@ $shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12),
 // .general-card .card__img--hover {
 //   background-image: url('https://images.pexels.com/photos/45202/brownie-dessert-cake-sweet-45202.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
 // }
-.card--1 .card__img, .card--1 .card__img--hover {
+.card--1 .card__img,
+.card--1 .card__img--hover {
   background-image: url('https://images.unsplash.com/photo-1470224114660-3f6686c562eb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f12900abf1c6ba142b664bc2aa2b8470&auto=format&fit=crop&w=675&q=80');
 }
-.card--2 .card__img, .card--2 .card__img--hover {
+
+.card--2 .card__img,
+.card--2 .card__img--hover {
   background-image: url('https://images.unsplash.com/photo-1506667527953-22eca67dd919?ixlib=rb-0.3.5&s=c14ecd092747c14dbbb73d712c5865f8&auto=format&fit=crop&w=1350&q=80');
 }
-.card--3 .card__img, .card--3 .card__img--hover {
+
+.card--3 .card__img,
+.card--3 .card__img--hover {
   background-image: url('https://images.unsplash.com/photo-1524513017549-db6af445c34a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a6887004bd8e1388c7beab2ac48def46&auto=format&fit=crop&w=2020&q=80');
 }
 
@@ -142,7 +147,7 @@ $shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12),
   position: relative;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0,0.1);
+  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
 }
 
 .lot-type-card:hover {
@@ -177,7 +182,7 @@ $shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12),
   margin-bottom: 10px;
   font-family: 'Roboto Slab', serif;
   text-align: center;
-  color:#fff;
+  color: #fff;
 }
 
 .general-card {
@@ -196,46 +201,50 @@ $shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12),
   margin-right: 25px;
   transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
   background-color: #fff;
-    width: 33.3%;
+  width: 33.3%;
   position: relative;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0,0.1);
+  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
 }
+
 .card:hover {
-  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0,0.1);
-    transform: scale(1.10, 1.10);
+  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.10, 1.10);
 }
 
 .card__info {
-z-index: 2;
+  z-index: 2;
   background-color: #fff;
   border-bottom-left-radius: 12px;
-border-bottom-right-radius: 12px;
-   padding: 16px 24px 24px 24px;
+  border-bottom-right-radius: 12px;
+  padding: 16px 24px 24px 24px;
 }
 
 
 .card__title {
-    margin-top: 5px;
-    margin-bottom: 10px;
-    font-family: 'Roboto Slab', serif;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-family: 'Roboto Slab', serif;
 }
 
 .card:hover .card__img--hover {
-    height: 100%;
-    opacity: 0.3;
+  height: 100%;
+  opacity: 0.3;
 }
 
 .card:hover .card__info {
-    background-color: transparent;
-    position: relative;
+  background-color: transparent;
+  position: relative;
 }
 
 .card:hover .card__info-hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 .box-center {
   margin: auto;
 }
+
+// ! header-bg
+$theme: (header-bg: linear-gradient(45deg, #02aab0 0%, #00cdac 100%));

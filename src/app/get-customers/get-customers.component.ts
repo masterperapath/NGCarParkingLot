@@ -1,16 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { customer } from '../../api/customer';
-import { MysqlService } from '../../services/mysql.service';
-import { Observable } from 'rxjs/Observable';
+import { customer } from '../api/customer';
+import { MysqlService } from '../services/mysql.service';
 
 @Component({
   moduleId: module.id,
-  selector: 'ngx-cp001component',
-  templateUrl: './cp001.component.html',
-  styleUrls: ['./cp001.component.scss']
+  selector: 'ngx-get-customers',
+  templateUrl: './get-customers.component.html',
+  styleUrls: ['./get-customers.component.scss']
 })
-export class Cp001Component implements OnInit {
-  ItemObservable: Observable<any>;
+export class GetCustomersComponent implements OnInit {
+
   customersMysql: customer[];
   usersLocal = [];
   textLocal: String;
@@ -19,22 +18,15 @@ export class Cp001Component implements OnInit {
   constructor(private _mysqlService: MysqlService) { }
 
   ngOnInit() {
-    console.log("ngOnInit Success!!");
     this.getCustomersMysql();
-    // this.getTextLocal();
     // this.getUsersLocal();
+    // this.getTextLocal();
   }
 
-  public getCustomersMysql() {
-    // ! Original Code
-    // this._mysqlService.getMysqlUsersDatas()
-    //   .subscribe(
-    //     res => this.customersMysql = res,
-    //     err => console.error(err.status)
-    //   );
+  private getCustomersMysql() {
     this._mysqlService.getMysqlUsersDatas()
       .subscribe(
-        rep => this.customersMysql = rep,
+        res => this.customersMysql = res,
         err => console.error(err.status)
       );
   }

@@ -13,6 +13,7 @@ import { Cp006Component } from './cp006/cp006.component';
 import { Cp007Component } from './cp007/cp007.component';
 import { Cp008Component } from './cp008/cp008.component'; 
 import { Cp009Component } from './cp009/cp009.component';
+import { GetCustomersComponent } from '../get-customers/get-customers.component';
 
 const routes: Routes = [{
   path: '',
@@ -48,7 +49,7 @@ const routes: Routes = [{
     path: 'cp009',
     component: Cp009Component,
   },
-   {
+  {
     path: '',
     redirectTo: 'dashboard',
     pathMatch: 'full',

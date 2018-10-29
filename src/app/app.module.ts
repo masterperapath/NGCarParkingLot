@@ -21,12 +21,21 @@ import { NbButtonModule } from '@nebular/theme/components/button/button.module';
 import { NbCardModule } from "@nebular/theme/components/card/card.module";
 import { NbInputModule } from "@nebular/theme";
 import { NgDatepickerModule } from 'ng2-datepicker';
-import { LandingPageComponent } from './landingPage/landingpage.component';
+// import { LandingPageComponent } from './landingPage/landingpage.component';
+// import {MysqlService} from './services/mysql.service';
+// import { GetCustomersComponent } from './get-customers/get-customers.component';
+// import { PostCustomersComponent } from './post-customers/post-customers.component';
+
+// * import Http module
+import { HttpModule } from '@angular/http';
+
+
+
 const PAGES_COMPONENTS = [
 
 ];
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent,/* GetCustomersComponent, PostCustomersComponent*/],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -40,6 +49,7 @@ const PAGES_COMPONENTS = [
     ThemeModule.forRoot(),
     CoreModule.forRoot(),
     QRCodeModule,
+    HttpModule,
   ],
   bootstrap: [AppComponent],
   providers: [
