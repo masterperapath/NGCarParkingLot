@@ -129,3 +129,11 @@
       border-radius: 11px;
     }
   }
+
+  :host /deep/ ng2-smart-table thead > tr > th {
+    // border: none;
+      // position: center;
+  }
+  :host /deep/ ng2-smart-table tbody > tr > td {
+    // border: none;
+  }
