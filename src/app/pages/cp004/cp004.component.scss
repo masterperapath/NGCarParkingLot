@@ -1,0 +1,15 @@
+@import '../cp003/cp003.component.scss';
+
+
+.btn-type-bg {
+    padding: 3rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    //   url("../../../assets/images/bg-header.jpg");
+    // object-fit: scale-down;
+  }
+
+
+  .parking_bg {
+    // background: url("../../../assets/images/parking-lot.jpg");
+    background: none;
+  }
