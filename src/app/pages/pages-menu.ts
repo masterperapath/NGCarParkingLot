@@ -7,6 +7,12 @@ export const MENU_ITEMS: NbMenuItem[] = [
   //   link: '/landing',
     
   // },
+    {
+    title: 'Landing',
+    //icon: 'nb-home',
+    link: '/pages/form/component-kendo/date',
+    
+  },
   {
     title: 'หน้าแรก',
     icon: 'fas fa-home',
