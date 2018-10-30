@@ -21,6 +21,17 @@ import { NbButtonModule } from '@nebular/theme/components/button/button.module';
 import { NbCardModule } from "@nebular/theme/components/card/card.module";
 import { NbInputModule } from "@nebular/theme";
 import { NgDatepickerModule } from 'ng2-datepicker';
+import { LandingPageComponent } from './landingPage/landingpage.component';
+
+import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
+import { CalendarModule } from '@progress/kendo-angular-dateinputs';
+import { IntlModule } from '@progress/kendo-angular-intl';
+
+import { DatePickerModule } from '@progress/kendo-angular-dateinputs';
+// import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
+// import { AutoCompleteModule } from '@progress/kendo-angular-dropdowns';
+// import { ComboBoxModule } from '@progress/kendo-angular-dropdowns';
+// import { ScrollViewModule } from '@progress/kendo-angular-scrollview';
 // import { LandingPageComponent } from './landingPage/landingpage.component';
 // import {MysqlService} from './services/mysql.service';
 // import { GetCustomersComponent } from './get-customers/get-customers.component';
@@ -49,6 +60,12 @@ const PAGES_COMPONENTS = [
     ThemeModule.forRoot(),
     CoreModule.forRoot(),
     QRCodeModule,
+
+
+    DatePickerModule,
+    DateInputsModule,
+    CalendarModule,
+    IntlModule,
     HttpModule,
   ],
   bootstrap: [AppComponent],
