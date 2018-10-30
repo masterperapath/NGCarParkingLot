@@ -13,11 +13,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
     link: '/pages/dashboard',
     home: true,
   },
-  {
-    title: 'Profile',
-    icon: 'fas fa-user-alt',
-    // link: '/pages/iot-dashboard',
-  },
+  // {
+  //   title: 'Profile',
+  //   icon: 'fas fa-user-alt',
+  //   link: '/pages/cp008',
+  // },
   {
     title: 'เลือกระบบการจอง',
     icon: 'fa fa-car',

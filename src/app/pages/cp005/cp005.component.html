@@ -1,21 +1,24 @@
-<nb-card>
-  <nb-card-header class="btn-type-bg">
+<nb-card status="info">
+  <nb-card-header class="" >
       <toaster-container [toasterconfig]="config" class="bg_toast"></toaster-container>
-    <h1 class="white-text"><i class="fa fa-check"></i> {{titleStatus}}</h1>
+    <h1 class="text-white"><i class="fa fa-check" style="color:green"></i> {{titleStatus}}</h1>
   </nb-card-header>
 </nb-card>
 
 <div class="row">
   <div class="col-md-6 reserveDetail">
-    <nb-card class="no-padding" status="info">
+    <nb-card class="no-padding" status="">
       <nb-card-header>
-        <h4 class="text-center text-white">รายละเอียดการจอง</h4>
+        <h4 class="text-center ">รายละเอียดการจอง</h4>
+        <hr style="width:100%;height:0.1rem;background-color:#ba7fec">
       </nb-card-header>
       <nb-card-body>
         <div class="">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores totam praesentium harum, repudiandae
-          beatae eius ab blanditiis molestiae, cupiditate, quo ex architecto provident delectus eaque maiores omnis
-          odio adipisci magni?
+          <p>
+            1. หลังจากจองสำเร็จแล้ว สิทธิ์ที่จองจะมีอายุ 2 ชั่วโมง นับจากเวลาจองที่ได้ระบุไว้ หากไม่ใช้งานภายในเวลาที่กำหนด ระบบจะถือว่าสละสิทธิ์ในการจองและจะตัดสิทธิ์ที่ได้จองไว้ <br>
+            2. สามารถจองพื้นที่จอดรถได้เพียง 1 ที่เท่านั้น <br>
+            3. สามารถจองล่วงหน้าได้ 1 วัน
+          </p>
         </div>
       </nb-card-body>
     </nb-card>

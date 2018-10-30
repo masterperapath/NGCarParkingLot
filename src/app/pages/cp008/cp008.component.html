@@ -1,0 +1,39 @@
+<h1>
+  get-customers works!
+</h1>
+<h3>Customers Datas</h3>
+<div *ngFor="let _customersMysql of customersMysql">
+  <h1>รายชื่อลูกค้า</h1>
+  <p>
+    <span class="demo-2"> {{_customersMysql.customerID}}. {{_customersMysql.firstName}} {{_customersMysql.lastName}}
+      {{_customersMysql.licensePlate}} </span>
+  </p>
+</div>
+
+<div class="movie_card">
+  <div class="parking_bg_header">
+    <div class="info_section">
+      <div class="movie_header">
+        <h1 style="color: #000"><b>Customers Datas</b></h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="movie_card">
+  <div class="parking_bg_header">
+    <div class="info_section">
+      <div class="movie_header">
+        <h3 style="text-align:center; color: #000"><b>กติกาในการจองที่จอดรถ</b></h3>
+        <!-- <h4><b>ประเภท: </b>{{lotType}}</h4> -->
+      </div>
+      <div class="movie_desc">
+        <label> Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nobis illo quas deleniti doloribus
+          error
+          nemo maxime. Nulla velit, doloremque molestias laudantium possimus eos accusantium! Facilis tenetur nisi enim
+          voluptas!</label>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="blur_back parking_bg"></div> -->
+</div>

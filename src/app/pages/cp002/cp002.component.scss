@@ -433,3 +433,19 @@ input[type="text"]:focus,input[type="date"]:focus {
 button[type="button"] {
   float: right;
 }
+
+
+.nb-theme-corporate nb-layout .layout nb-layout-header nav {
+  background: #ffa600 !important;
+}
+
+// * type card text
+.general-title {
+  color:#11b452;
+}
+.vip-title {
+  color: #ffa100;
+}
+.disabled-title {
+  color: #006eff;
+}

@@ -1,4 +1,4 @@
-//@import '../cp002/cp002.component.scss';
+// @import '../cp002/cp002.component.scss';
 
 .btn-type-bg {
   padding: 3rem;
@@ -32,8 +32,9 @@ input[type="text"]:focus,input[type="date"]:focus {
   transition: 0.4s;
 }
 
-button[type="button"] {
-  float: right;
+button[type="button"].btn.btn-primary {
+  display: block;
+  margin: 0 auto;
 }
 
 // .card {
@@ -150,13 +151,30 @@ button[type="button"] {
   }
 }
 
+.reserve_info {
+  margin: auto;
+  color: #000;
+}
+.reserve_info h4 {
+  text-align: center;
+  font-weight: bold;
+}
+
 @media screen and (min-width: 768px) {
+  .movie_card {
+    width: 95%;
+    margin: auto;
+  }
   .movie_header{
     width: 65%;
   }
   
   .movie_desc{
-    width: 50%;
+    width: 100%;
+  }
+
+  .reserve_info {
+    width: 60%;
   }
   
   .info_section{
@@ -200,4 +218,46 @@ button[type="button"] {
 
 .parking_bg {
   background: url("../../../assets/img/monney_cp004_BG.jpg");
+}
+
+// * Payment Method
+.div-input {
+  border: 1px solid red;
+  margin: 16px 0;
+  height: 40px;
+}
+
+.cc-selector input{
+  margin:0;padding:0;
+  -webkit-appearance:none;
+     -moz-appearance:none;
+          appearance:none;
+}
+.visa{background-image:url(http://i.imgur.com/lXzJ1eB.png);}
+.mastercard{background-image:url(http://i.imgur.com/SJbRQF7.png);}
+.drinkcard-cc{
+  cursor:pointer;
+  background-size:contain;
+  background-repeat:no-repeat;
+  display:block;
+  margin: 0 auto;
+  width:300px;height:180px;
+
+  -webkit-transition: all 100ms ease-in;
+     -moz-transition: all 100ms ease-in;
+          transition: all 100ms ease-in;
+  -webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
+     -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
+          filter: brightness(1.8) grayscale(1) opacity(.7);
+}
+.drinkcard-cc:hover{
+  -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
+     -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
+          filter: brightness(1.2) grayscale(.5) opacity(.9);
+}
+.cc-selector input:active +.drinkcard-cc{opacity: .9;}
+.cc-selector input:checked +.drinkcard-cc{
+  -webkit-filter: none;
+     -moz-filter: none;
+          filter: none;
 }

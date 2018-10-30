@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./cp004.component.scss']
 })
 export class Cp004Component implements OnInit{
-  title = 'การชำระเงิน';
+  title = 'ชำระเงิน';
 
   constructor(private router: Router) {
 
