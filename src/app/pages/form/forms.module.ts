@@ -6,12 +6,12 @@ import { FormsRoutingModule, routedComponents } from './forms-routing.mocule';
 // import { DatePickerModule, DateInputsModule } from '@progress/kendo-angular-dateinputs'; 
 // import { IntlModule } from '@progress/kendo-angular-intl';
 
-import { KendoDateComponent } from './component-kendo/date/date.component';
+// import { KendoDateComponent } from './component-kendo/date/date.component';
 
 
 const components = [
     ...routedComponents,
-    KendoDateComponent
+    // KendoDateComponent
 ];
 
 @NgModule ({
