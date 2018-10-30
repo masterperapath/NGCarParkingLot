@@ -1,41 +1,17 @@
-<!-- <div class="row">
-    <div class="col-12">
-      <form [formGroup]="form">
-        <nb-card>
-          <nb-card-body class="nb-top">
-                <div class="container-btn">
-                        <button class="btn">6574576456745</button>
-                </div>
-          </nb-card-body>
-        </nb-card>
-       </form>
-    </div>
+<h1>
+  get-customers works!
+</h1>
+<h3>Customers Datas</h3>
+<div *ngFor="let _customersMysql of customersMysql">
+  <h1>รายชื่อลูกค้า</h1>
+  <p>
+    <span class="demo-2"> {{_customersMysql.customerID}}. {{_customersMysql.firstName}} {{_customersMysql.lastName}} {{_customersMysql.licensePlate}} </span>
+  </p>
+</div>
+
+<!-- <div *ngFor="let _usersLocal of usersLocal">
+  <h1>person</h1>
+  <p>
+    <span class="demo-2"> {{_usersLocal.customerID}}. {{_usersLocal.firstName}} {{_usersLocal.lastname}} </span>
+  </p>
 </div> -->
-
-<div class="row">
-  <div class="col-md-12">
-    <h1>My Hero</h1>
-    <ul class="heroes">
-      <li *ngFor="let hero of heroes">
-        <div class="col-md-2">
-          <label>id: </label><span>{{hero.id}}</span>
-        </div>
-        <div class="col-md-2">
-          <label>name: </label><span>{{hero.name}}</span>
-        </div>
-      </li>
-    </ul>
-  </div>
-</div>
-
-
-<div *ngFor="let hero of heroes">
-      <h1>{{hero.name | uppercase}} Detail</h1>
-      <div><span>id:</span>{{hero.id}}</div>
-      <div>
-        <label>
-          <input [(ngModel)]="hero.name" placeholder="name" />
-        </label>
-      </div>
-</div>
-

@@ -9,6 +9,9 @@ import { Ng2SmartTableModule } from 'ng2-smart-table';
 // import { TablesRoutingModule, routedComponents } from './tables-routing.module';
 import { SmartTableService } from '../@core/data/smart-table.service';
 
+// * import provider
+import {MysqlService} from '../services/mysql.service';
+
 //QRCode
 import { NgxQRCodeModule } from 'ngx-qrcode2';
 import { QRCodeModule } from 'angularx-qrcode';
@@ -29,6 +32,8 @@ import { Cp006Component } from './cp006/cp006.component';
 import { Cp007Component } from './cp007/cp007.component';
 import { Cp008Component } from './cp008/cp008.component';
 import { Cp009Component } from './cp009/cp009.component';
+// import { GetCustomersComponent } from '../get-customers/get-customers.component';
+// import { PostCustomersComponent } from '../post-customers/post-customers.component';
 
 const PAGES_COMPONENTS = [
   PagesComponent,
@@ -67,7 +72,7 @@ const PAGES_COMPONENTS = [
 
   ],
   providers: [
-    SmartTableService,
+    SmartTableService,MysqlService
   ],
   
 })

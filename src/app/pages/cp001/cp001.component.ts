@@ -1,34 +1,54 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { HEROES } from '../../controller/data/data.component';
-import { Hero } from '../../controller/data-interface/data.component';
-
-import { FormGroup, FormControl, Validators, FormControlName, FormsModule } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { customer } from '../../api/customer';
+import { MysqlService } from '../../services/mysql.service';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
-  selector: 'ngx-cp001',
+  moduleId: module.id,
+  selector: 'ngx-cp001component',
   templateUrl: './cp001.component.html',
   styleUrls: ['./cp001.component.scss']
 })
 export class Cp001Component implements OnInit {
-  title = 'MasterPerapathKanthong';
+  ItemObservable: Observable<any>;
+  customersMysql: customer[];
+  usersLocal = [];
+  textLocal: String;
 
-  heroes = HEROES;
 
-  @Input() hero: Hero;
+  constructor(private _mysqlService: MysqlService) { }
 
+  ngOnInit() {
+    console.log("ngOnInit Success!!");
+    this.getCustomersMysql();
+    // this.getTextLocal();
+    // this.getUsersLocal();
+  }
 
-  form = new FormGroup({
+  public getCustomersMysql() {
+    // ! Original Code
+    this._mysqlService.getMysqlUsersDatas()
+      .subscribe(
+        res => this.customersMysql = res,
+        err => console.error(err.status)
+      );
+    
+  }
 
-  })
-  // hero: Hero = {
-  //   id: 1,
-  //   name: 'MasterPerapath',
+  // private getUsersLocal() {
+  //   this._mysqlService.getLocalUsersDatas()
+  //     .subscribe(
+  //       res => this.usersLocal = res,
+  //       err => console.error(err.status)
+  //     );
   // }
 
-  constructor(){
+  // private getTextLocal() {
+  //   this._mysqlService.getLocalTextDatas()
+  //     .subscribe(
+  //       res => this.textLocal = res,
+  //       err => console.error(err.status)
+  //     );
+  // }
 
-  }
-  ngOnInit(){
-
-  }
 }

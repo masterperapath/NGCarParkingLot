@@ -32,12 +32,21 @@ import { DatePickerModule } from '@progress/kendo-angular-dateinputs';
 // import { AutoCompleteModule } from '@progress/kendo-angular-dropdowns';
 // import { ComboBoxModule } from '@progress/kendo-angular-dropdowns';
 // import { ScrollViewModule } from '@progress/kendo-angular-scrollview';
+// import { LandingPageComponent } from './landingPage/landingpage.component';
+// import {MysqlService} from './services/mysql.service';
+// import { GetCustomersComponent } from './get-customers/get-customers.component';
+// import { PostCustomersComponent } from './post-customers/post-customers.component';
+
+// * import Http module
+import { HttpModule } from '@angular/http';
+
+
 
 const PAGES_COMPONENTS = [
 
 ];
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent,/* GetCustomersComponent, PostCustomersComponent*/],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -57,6 +66,7 @@ const PAGES_COMPONENTS = [
     DateInputsModule,
     CalendarModule,
     IntlModule,
+    HttpModule,
   ],
   bootstrap: [AppComponent],
   providers: [
