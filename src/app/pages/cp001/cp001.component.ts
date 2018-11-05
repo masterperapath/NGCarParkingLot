@@ -19,36 +19,22 @@ export class Cp001Component implements OnInit {
   constructor(private _mysqlService: MysqlService) { }
 
   ngOnInit() {
-    console.log("ngOnInit Success!!");
     this.getCustomersMysql();
-    // this.getTextLocal();
-    // this.getUsersLocal();
   }
 
   public getCustomersMysql() {
     // ! Original Code
     this._mysqlService.getMysqlUsersDatas()
-      .subscribe(
-        res => this.customersMysql = res,
-        err => console.error(err.status)
+      .subscribe((resp) =>{
+          // res => this.customersMysql = res,
+          // err => console.error(err.status)
+          // console.log('Dataaaaaaa -----> ', resp);
+          this.customersMysql = resp;
+
+        }, (error) => {
+          console.log('Errorrrrr ----> ', error)
+        }
       );
     
   }
-
-  // private getUsersLocal() {
-  //   this._mysqlService.getLocalUsersDatas()
-  //     .subscribe(
-  //       res => this.usersLocal = res,
-  //       err => console.error(err.status)
-  //     );
-  // }
-
-  // private getTextLocal() {
-  //   this._mysqlService.getLocalTextDatas()
-  //     .subscribe(
-  //       res => this.textLocal = res,
-  //       err => console.error(err.status)
-  //     );
-  // }
-
 }
