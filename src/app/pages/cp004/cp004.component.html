@@ -15,56 +15,88 @@
 </nb-card> -->
 
 <div class="movie_card">
-    <div class="info_section">
-      <div class="movie_header">
-        <h1><b>{{title}}</b></h1>
-        <!-- <h4><b>ประเภท: </b>{{lotType}}</h4> -->
-      </div>
-      <div class="">
-      <div class="movie_desc">
-        <form class="form-control-group">
-          <h4>เลือกวิธีการชำระเงิน</h4>
-          
-          <div class="row">
+  <div class="info_section">
+    <div class="movie_header">
+      <h1><b>{{title}}</b></h1>
+      <!-- <h4><b>ประเภท: </b>{{lotType}}</h4> -->
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="movie_desc">
+          <form class="form-control-group">
+            <h4>เลือกวิธีการชำระเงิน</h4><br>
+
+            <!-- <div class="row">
             <div class="col-md-8 offset-2">
-                <div class="patment-radio col-sm-10">
-                    <label class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" name="customRadio">
-                        <span class="custom-control-indicator"></span>
-                        <span class="custom-control-description">Banking</span>
-                        <span class="custom-control-description">Mobile Banking1</span>
-                    </label>
-                    <label class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" name="customRadio">
-                        <!--สามารถใส่ckecked-->
-                        <span class="custom-control-indicator"></span>
-                        <span class="custom-control-description">Banking</span>
-                        <span class="custom-control-description">Mobile Banking2</span>
-                    </label>
-                    <label class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" name="customRadio">
-                        <span class="custom-control-indicator"></span>
-                        <span class="custom-control-description">Banking</span>
-                        <span class="custom-control-description">Mobile Banking3</span>
-                    </label>
+              <div class="patment-radio col-sm-10">
+                <label class="custom-control custom-radio div-input">
+                  <input type="radio" class="custom-control-input" name="customRadio">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">Banking</span>
+                  <span class="custom-control-description">Mobile Banking1</span>
+                </label>
+                <label class="custom-control custom-radio div-input">
+                  <input type="radio" class="custom-control-input" name="customRadio">
+                  
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">Banking</span>
+                  <span class="custom-control-description">Mobile Banking2</span>
+                </label>
+              </div>
+            </div>
+          </div> -->
+            <div class="row">
+              <div class="col-md-6 offset-0">
+                <div class="cc-selector">
+                  <input checked="checked" id="visa" type="radio" name="credit-card" value="visa" />
+                  <label class="drinkcard-cc visa" for="visa"></label>
+                  <!-- <input id="mastercard" type="radio" name="credit-card" value="mastercard" />
+                <label class="drinkcard-cc mastercard" for="mastercard"></label> -->
                 </div>
+              </div>
+              <div class="col-md-6 offset-0">
+                <div class="cc-selector">
+                  <input id="mastercard" type="radio" name="credit-card" value="mastercard" />
+                  <label class="drinkcard-cc mastercard" for="mastercard"></label>
+                </div>
+              </div>
             </div>
-          </div>
+            <br>
+            <!-- <h4>ระยะเวลาในการจอง 2 ชั่วโมง</h4> -->
+            <div class="row">
+              <div class="col-md-12 offset-0">
+                  <br>
+                <!-- <input type="text" placeholder="ช่องนี้ใส่อะไร" class="effect-2"> -->
+                <!-- <span class="focus-border"></span> -->
+                <button type="button" class="btn btn-primary" (click)="payment()">ชำระเงิน</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <!-- <div class="reserve_info">
+          <h4>ข้อมูลการจอง</h4><br>
+          <p>
+            <b>วันที่:</b> 12 พฤศจิกายน 2561
+          </p>
+          <p>
+            <b>เวลา:</b> 10:00 น.
+          </p>
+          <p>
+            <b>ประเภท:</b> ทั่วไป
+          </p>
+          <p>
+            <b>ราคา:</b> 20 บาท
+          </p>
           <br>
-          <!-- <h4>ระยะเวลาในการจอง 2 ชั่วโมง</h4> -->
-          <div class="row">
-            <div class="col-md-8 offset-2">
-              <!-- <input type="text" placeholder="ช่องนี้ใส่อะไร" class="effect-2"> -->
-              <span class="focus-border"></span>
-              <button type="button" class="btn btn-primary" (click)="payment()">ชำระเงิน</button>
-            </div>
-          </div>
-        </form>
+          <h5>ข้อควรระวัง</h5>
+          <p>
+            สิทธ์ในการจองที่จอดรถที่ยังไม่ใช้ จะหมดอายุนับจากเวลาที่ได้จองไว้ 2 ชั่วโมง
+          </p>
+        </div> -->
       </div>
     </div>
-    </div>
-    <div class="blur_back parking_bg"></div>
   </div>
-
-
-
+  <div class="blur_back parking_bg"></div>
+</div>

@@ -55,3 +55,5 @@ $route['translate_uri_dashes'] = FALSE;
 
 // TODO: Custom Routes
 $route['get_customers'] = "get_customers/getCustomers";
+$route['User/getAllUser']['get'] = "User/getAllUser";
+
