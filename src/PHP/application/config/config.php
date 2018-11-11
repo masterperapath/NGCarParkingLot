@@ -23,8 +23,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-// $config['base_url'] = 'http://localhost/NGCarParkingLot/src/PHP/';
-$config['base_url'] = '';
+$config['base_url'] = 'http://localhost/NGCarParkingLot/src/PHP';
+// $config['base_url'] = '';
 
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +37,7 @@ $config['base_url'] = '';
 |
 */
 $config['index_page'] = 'index.php';
+// $config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
@@ -159,7 +160,9 @@ $config['composer_autoload'] = FALSE;
 | DO NOT CHANGE THIS UNLESS YOU FULLY UNDERSTAND THE REPERCUSSIONS!!
 |
 */
-$config['permitted_uri_chars'] = 'a-z 0-9~%.:_\-';
+// $config['permitted_uri_chars'] = 'a-z 0-9~%.:_\-';
+$config['permitted_uri_chars'] = 'a-z 0-9~%.:_$\-@\=';
+// $config['permitted_uri_chars'] = 'a-z 0-9~%.$:_-\@=+';
 
 /*
 |--------------------------------------------------------------------------
@@ -183,7 +186,7 @@ $config['permitted_uri_chars'] = 'a-z 0-9~%.:_\-';
 | use segment based URLs.
 |
 */
-$config['enable_query_strings'] = FALSE;
+$config['enable_query_strings'] = false;
 $config['controller_trigger'] = 'c';
 $config['function_trigger'] = 'm';
 $config['directory_trigger'] = 'd';
@@ -325,7 +328,7 @@ $config['cache_query_string'] = FALSE;
 | https://codeigniter.com/user_guide/libraries/encryption.html
 |
 */
-$config['encryption_key'] = '';
+$config['encryption_key'] = 'UjXn2r5u8x/A%D*G-KaPdSgVkYp3s6v9';
 
 /*
 |--------------------------------------------------------------------------
@@ -381,8 +384,14 @@ $config['encryption_key'] = '';
 $config['sess_driver'] = 'files';
 $config['sess_cookie_name'] = 'ci_session';
 $config['sess_expiration'] = 7200;
+// $config['sess_expire_on_close'] = FALSE;
+// $config['sess_encrypt_cookie'] = FALSE;
+// $config['sess_use_database'] = TRUE;
+// $config['sess_table_name'] = 'ci_sessions';
+// $config['sess_save_path'] = 'ci_sessions';
 $config['sess_save_path'] = NULL;
 $config['sess_match_ip'] = FALSE;
+// $config['sess_match_useragent'] = TRUE;
 $config['sess_time_to_update'] = 300;
 $config['sess_regenerate_destroy'] = FALSE;
 
