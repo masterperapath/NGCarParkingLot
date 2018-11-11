@@ -12,37 +12,41 @@ export class SignUpComponent implements OnInit {
   title = 'SignupComponent';
 
   username : any;
+  password : any;
+  conf_password : any;
+  email : any;
 
   constructor(private router: Router) {
 
   }
   ngOnInit() {
-
-
+    // this.username = (<HTMLInputElement>document.getElementById("username")).value;
+      // alert (this.username);
+      console.log(this.username);
   }
 
   form = new FormGroup({
-    Cancel: new FormControl(),
-    searchG1: new FormControl(),
-    searchG2: new FormControl(),
-    txtCommonInfo: new FormControl(),
-    txtRequestDate: new FormControl(),
-    txtExpireDate: new FormControl(),
-    listServiceType: new FormControl(),
-    listUrgentLevel: new FormControl(),
-    listPriority: new FormControl(),
-    activeButton: new FormControl(),
-    criteriaSearchHide: new FormControl(),
-    criteriaSearchShow: new FormControl(),
-    criteriaSearch: new FormControl(),
+    username : new FormControl(),
+    password : new FormControl(),
+    conf_password : new FormControl(),
+    email : new FormControl(),
     // username: new FormG/roup(),
   });
 
   sign(){
-    if (this.username = ''){
-      alert("แจ้งเตือน");
+    this.username = (<HTMLInputElement>document.getElementById("username")).value;
+    this.password = (<HTMLInputElement>document.getElementById("password")).value;
+    this.conf_password = (<HTMLInputElement>document.getElementById("conf_password")).value;
+    this.email = (<HTMLInputElement>document.getElementById("email")).value;
+    // alert("Username is" + ":" + this.username);
+    console.log(this.username, this.password, this.conf_password, this.email);
+
+    if (this.username == "" || this.password == "" || this.conf_password == "" || this.email == ""){
+      
+      console.log("ว่าง");
     }
     else{
+      // ใส่ Json ที่นี่
       this.router.navigateByUrl("/landing");
     }
   }

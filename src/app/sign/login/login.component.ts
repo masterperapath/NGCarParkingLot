@@ -6,6 +6,8 @@ import { NbLoginComponent } from '@nebular/auth';
 import { NbAuthSocialLink } from '@nebular/auth';
 import { NbAuthService } from '@nebular/auth';
 
+import { FormGroup, FormControl, Validators, FormControlName } from '@angular/forms';
+
 @Component({
   selector: 'ngx-login',
   templateUrl: './login.component.html',
@@ -14,6 +16,8 @@ import { NbAuthService } from '@nebular/auth';
 export class LoginComponent implements OnInit {
   title = 'LoginComponent';
 
+  username : any;
+  password : any;
 
 
   constructor(private router: Router) {
@@ -23,11 +27,28 @@ export class LoginComponent implements OnInit {
 
   }
 
+  form = new FormGroup({
+    username : new FormControl(),
+    password : new FormControl(),
+    // username: new FormG/roup(),
+  });
+
   relanding(){
     this.router.navigateByUrl("/landing");
   }
 
   Confirm(){
-    this.router.navigateByUrl("/pages/dashboard");
+    this.username = (<HTMLInputElement>document.getElementById("username")).value;
+    this.password = (<HTMLInputElement>document.getElementById("password")).value;
+
+
+    console.log(this.username, this.password);
+    if(this.username == "" || this.password == ""){
+      alert("ไม่ช่องใดช่องหนึ่งว่างกรุณากรอกใหม่");
+    }else {
+      // ใส่ Json ที่นี่
+      this.router.navigateByUrl("/pages/dashboard");
+    }
+
   }
 }
