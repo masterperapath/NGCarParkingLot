@@ -4,6 +4,18 @@ import { Router } from '@angular/router';
 import * as frLocale from 'date-fns/locale/fr';
 import { DatepickerOptions  } from 'ng2-datepicker';
 
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { IntlModule } from '@progress/kendo-angular-intl';
+import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
+
+import { DatetimePopupModule } from 'ngx-bootstrap-datetime-popup';
+
+import {AccordionModule} from 'primeng/accordion';     //accordion and accordion tab
+import {MenuItem} from 'primeng/api';                 //api
+
+
+
 @Component({
   selector: 'ngx-cp003',
   templateUrl: './cp003.component.html',
@@ -40,5 +52,7 @@ export class Cp003Component implements OnInit {
   confirm() {
     this.router.navigateByUrl("/pages/cp004");
   }
+
+  public txtRequestDateValue: Date = new Date(2018, 4, 28);
 }
 
