@@ -1,188 +1,209 @@
-<!-- <div class="card-title lot-type">
-  <h1 class="headerText" style="color:#fff">{{headerText}}</h1>
-</div> -->
+<form [formGroup]="form">
 
-<!-- <nb-card status="info" class="shadow btn-type-bg">
-  <nb-card-header>
-    <h1 style="color:#fff">{{headerText}}</h1>
-  </nb-card-header>
-</nb-card> -->
-<div class="movie_card">
-  <div class="parking_bg_header">
-    <div class="info_section">
-      <div class="movie_header">
-        <h1 style="color: #000"><b>{{headerText}}</b></h1>
-      </div>
-    </div>
-  </div>
-</div>
-<br />
-<br />
+  <div class="row" id="q1">
+    <div class="col-md-12">
+      <div class="movie_card">
+        <div class="parking_bg_header">
+          <div class="info_section">
+            <div class="movie_header">
 
-<!-- <div class="row">
-  <div class="col-md-4 cards">
-    <div class="card lot-type-card general-card">
-      <div class="card__info-hover">
-      </div>
-      <div class="card__img"></div>
-      <a href="#" class="card_link">
-        <div class="card__img--hover"></div>
-      </a>
-      <div class="card__info">
-        <h3 class="card__title">Crisp Spanish tortilla Matzo brei</h3>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="card lot-type-card disabled-card">
-
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="card lot-type-card vip-card">
-
-    </div>
-  </div>
-</div> -->
-
-<div class="cards box-center">
-  <div class="card card--1">
-    <div class="card__info-hover">
-    </div>
-    <div class="card__img"></div>
-    <a (click)="general()" class="card_link">
-      <div class="card__img--hover"></div>
-    </a>
-    <div class="card__info">
-      <h3 class="card__title general-title">ธรรมดา</h3>
-    </div>
-  </div>
-  <div class="card card--2">
-    <div class="card__info-hover">
-    </div>
-    <div class="card__img"></div>
-    <a (click)="general()" class="card_link">
-      <div class="card__img--hover"></div>
-    </a>
-    <div class="card__info">
-      <h3 class="card__title vip-title">VIP</h3>
-    </div>
-  </div>
-  <div class="card card--3">
-    <div class="card__info-hover">
-    </div>
-    <div class="card__img"></div>
-    <a (click)="general()" class="card_link">
-      <div class="card__img--hover"></div>
-    </a>
-    <div class="card__info">
-      <h3 class="card__title disabled-title">สำหรับผู้พิการ</h3>
-    </div>
-  </div>
-</div>
-
-<br />
-<br />
-
-<div class="row">
-  <div class="col-md-4">
-    <div class="movie_card">
-      <div class="info_section">
-        <div class="movie_header">
-          <h3 style="text-align:center; color: #000"><b>กติกาในการจองที่จอดรถ</b></h3>
-          <!-- <h4><b>ประเภท: </b>{{lotType}}</h4> -->
-        </div>
-        <div class="movie_desc">
-          <p>
-            1. หลังจากจองสำเร็จแล้ว สิทธิ์ที่จองจะมีอายุ 2 ชั่วโมง นับจากเวลาจองที่ได้ระบุไว้
-            หากไม่ใช้งานภายในเวลาที่กำหนด ระบบจะถือว่าสละสิทธิ์ในการจองและจะตัดสิทธิ์ที่ได้จองไว้ <br>
-            2. สามารถจองพื้นที่จอดรถได้เพียง 1 ที่เท่านั้น <br>
-            3. สามารถจองล่วงหน้าได้ 1 วัน
-          </p>
-        </div>
-      </div>
-      <!-- <div class="blur_back parking_bg"></div> -->
-    </div>
-  </div>
-  <div class="col-md-8">
-    <div class="movie_card">
-      <div class="info_section">
-        <div class="movie_header">
-          <h1 style="text-align:center; color: #000"><b>{{displayDate}}</b></h1>
-          <hr style="width:100%;height:0.1rem;background-color:#000">
-          <!-- <h4><b>ประเภท: </b>{{lotType}}</h4> -->
-        </div>
-        <div class="movie_desc">
-          <form class="form-control-group">
-            <div class="row">
-              <div class="col-md-4">
-                <h5>General</h5>
-              </div>
-              <div class="col-md-4"><b>ว่าง: </b> 15</div>
-              <div class="col-md-4"><b>ไม่ว่าง: </b> 200</div>
+              <h1 style="color: #000"><b>{{headerText}}</b></h1>
             </div>
-            <div class="row">
-              <div class="col-md-4">
-                <h5>สำหรับผู้พิการ</h5>
-              </div>
-              <div class="col-md-4"><b>ว่าง: </b> 15</div>
-              <div class="col-md-4"><b>ไม่ว่าง: </b> 200</div>
-            </div>
-            <div class="row">
-              <div class="col-md-4">
-                <h5>VIP</h5>
-              </div>
-              <div class="col-md-4"><b>ว่าง: </b> 15</div>
-              <div class="col-md-4"><b>ไม่ว่าง: </b> 200</div>
-            </div>
-          </form>
+          </div>
         </div>
       </div>
-      <!-- <div class="blur_back parking_bg"></div> -->
+      <br />
+      <br />
+
+
+      <div class="cards box-center">
+        <div class="card card--1">
+          <div class="card__info-hover">
+          </div>
+          <div class="card__img"></div>
+          <a (click)="general()" class="card_link">
+            <div class="card__img--hover"></div>
+          </a>
+          <div class="card__info">
+            <h3 class="card__title general-title">ธรรมดา</h3>
+          </div>
+        </div>
+        <div class="card card--2">
+          <div class="card__info-hover">
+          </div>
+          <div class="card__img"></div>
+          <a (click)="vip()" class="card_link">
+            <div class="card__img--hover"></div>
+          </a>
+          <div class="card__info">
+            <h3 class="card__title vip-title">VIP</h3>
+          </div>
+        </div>
+        <div class="card card--3">
+          <div class="card__info-hover">
+          </div>
+          <div class="card__img"></div>
+          <a (click)="defective()" class="card_link">
+            <div class="card__img--hover"></div>
+          </a>
+          <div class="card__info">
+            <h3 class="card__title disabled-title">สำหรับผู้พิการ</h3>
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+      <div class="row">
+        <div class="col-md-4">
+          <div class="movie_card">
+            <div class="info_section">
+              <div class="movie_headerq1">
+                <h4 style="text-align:center; color: #000"><b>กติกาในการจองที่จอดรถ</b></h4>
+                <!-- <h4><b>ประเภท: </b>{{lotType}}</h4> -->
+              </div>
+              <div class="movie_desc">
+                <p>
+                  1. หลังจากจองสำเร็จแล้ว สิทธิ์ที่จองจะมีอายุ 2 ชั่วโมง นับจากเวลาจองที่ได้ระบุไว้
+                  หากไม่ใช้งานภายในเวลาที่กำหนด ระบบจะถือว่าสละสิทธิ์ในการจองและจะตัดสิทธิ์ที่ได้จองไว้ <br>
+                  2. สามารถจองพื้นที่จอดรถได้เพียง 1 ที่เท่านั้น <br>
+                  3. สามารถจองล่วงหน้าได้ 1 วัน
+                </p>
+              </div>
+            </div>
+            <!-- <div class="blur_back parking_bg"></div> -->
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="movie_card">
+            <div class="info_section">
+              <div class="movie_headerdate">
+                <h1 style="text-align:center; color: #000"><b>{{displayDate}}</b></h1>
+                <hr style="width:100%;height:0.1rem;background-color:#000">
+                <!-- <h4><b>ประเภท: </b>{{lotType}}</h4> -->
+              </div>
+              <div class="movie_desc">
+                <form class="form-control-group">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <h5>General</h5>
+                    </div>
+                    <div class="col-md-4"><b>ว่าง: </b> 15</div>
+                    <div class="col-md-4"><b>ไม่ว่าง: </b> 200</div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <h5>สำหรับผู้พิการ</h5>
+                    </div>
+                    <div class="col-md-4"><b>ว่าง: </b> 15</div>
+                    <div class="col-md-4"><b>ไม่ว่าง: </b> 200</div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <h5>VIP</h5>
+                    </div>
+                    <div class="col-md-4"><b>ว่าง: </b> 15</div>
+                    <div class="col-md-4"><b>ไม่ว่าง: </b> 200</div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!-- <div class="blur_back parking_bg"></div> -->
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- <div class="row">
-  <div class="col-md-4">
-    <nb-card size="'medium'" status="danger" class="shadow" style="width:100%;">
-      <nb-card-header style="text-align:center;color: #fff">กติกาในการจองที่จอดรถ</nb-card-header>
-      <nb-card-body>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nobis illo quas deleniti doloribus error
-        nemo maxime. Nulla velit, doloremque molestias laudantium possimus eos accusantium! Facilis tenetur nisi enim
-        voluptas!
-      </nb-card-body>
-    </nb-card>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="movie_card" id="q2" style="display: none">
+        <div class="info_section">
+          <div class="movie_header">
+            <h1><b>{{title}}</b></h1>
+            <h4><b>ประเภท: </b>{{lotType}}</h4>
+          </div>
+          <div class="movie_descq2">
+            <form class="form-control-group">
+              <h4>ทำการจอง</h4>
+              <div class="row">
+                <div class="col-md-8 offset-2">
+                  <h1 style="text-align:center; color: #000"><b>{{displayDate}}</b></h1>
+                  <!-- <input
+                  class="form-control"
+                  [minDate]="minDate"
+                  [maxDate]="maxDate"
+                  #dpMDY="bsDatepicker"
+                  bsDatepicker
+                  formControlName="myDateMDY"
+                  [bsConfig]="{ dateInputFormat: 'MM/DD/YYYY' }"> -->
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-8 offset-2">
+                  <timepicker [(ngModel)]="mytime" [showMeridian]="ismeridian" [ngModelOptions]="{standalone: true}" [meridians]="meridians"></timepicker>
+                </div>
+              </div>
+              <br>
+              <h4>ระยะเวลาในการจอง 2 ชั่วโมง</h4>
+              <div class="row">
+                <div class="col-md-8 offset-2">
+                  <input type="text" placeholder="" class="effect-2" disabled>
+                  <span class="focus-border"></span>
+                  <button type="button" class="btn btn-primary" (click)="confirm()">ยืนยันการจอง</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="blur_back parking_bg"></div>
+      </div>
+    </div>
   </div>
-  <div class="col-md-8">
-    <nb-card size="'medium'" class="shadow">
-      <nb-card-header style="text-align:right">
-        {{displayDate}}
-        <hr style="width:100%;height:0.1rem;background-color:#ba7fec">
-      </nb-card-header>
-      <nb-card-body>
-        <div class="row">
-          <div class="col-md-4">
-            <h5>General</h5>
+
+  <div class="row" id="q3" style="display: none">
+    <div class="col-md-12">
+      <div class="movie_card">
+        <div class="info_section">
+          <div class="movie_header">
+            <h1><b>{{title}}</b></h1>
           </div>
-          <div class="col-md-4"><b>ว่าง: </b> 15</div>
-          <div class="col-md-4"><b>ไม่ว่าง: </b> 200</div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <h5>สำหรับผู้พิการ</h5>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="movie_desc">
+                <form class="form-control-group">
+                  <h4>เลือกวิธีการชำระเงิน</h4><br>
+                  <div class="row">
+                    <div class="col-md-6 offset-0">
+                      <div class="cc-selector">
+                        <input checked="checked" id="visa" type="radio" name="credit-card" value="visa" />
+                        <label class="drinkcard-cc visa" for="visa"></label>
+                      </div>
+                    </div>
+                    <div class="col-md-6 offset-0">
+                      <div class="cc-selector">
+                        <input id="mastercard" type="radio" name="credit-card" value="mastercard" />
+                        <label class="drinkcard-cc mastercard" for="mastercard"></label>
+                      </div>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="row">
+                    <div class="col-md-12 offset-0">
+                      <br>
+                      <button type="button" class="btn btn-primary" (click)="payment()">ชำระเงิน</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="col-md-6">
+            </div>
           </div>
-          <div class="col-md-4"><b>ว่าง: </b> 15</div>
-          <div class="col-md-4"><b>ไม่ว่าง: </b> 200</div>
         </div>
-        <div class="row">
-          <div class="col-md-4">
-            <h5>VIP</h5>
-          </div>
-          <div class="col-md-4"><b>ว่าง: </b> 15</div>
-          <div class="col-md-4"><b>ไม่ว่าง: </b> 200</div>
-        </div>
-      </nb-card-body>
-    </nb-card>
+        <div class="blur_back parking_bg"></div>
+      </div>
+    </div>
   </div>
-</div> -->
+
+
+</form>

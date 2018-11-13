@@ -1,5 +1,8 @@
 //@import '../cp002/cp002.component.scss';
 
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~open-iconic/font/css/open-iconic-bootstrap.css';
+
 .btn-type-bg {
   padding: 3rem;
   background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
@@ -201,3 +204,7 @@ button[type="button"] {
 .parking_bg {
   background: url("../../../assets/images/parking-lot.jpg");
 }
+
+
+
+

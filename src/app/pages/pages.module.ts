@@ -35,6 +35,13 @@ import { Cp009Component } from './cp009/cp009.component';
 // import { GetCustomersComponent } from '../get-customers/get-customers.component';
 // import { PostCustomersComponent } from '../post-customers/post-customers.component';
 
+import { TimepickerModule } from 'ngx-bootstrap/timepicker';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+
+// import { BrowserModule } from '@angular/platform-browser';
+// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import { IntlModule } from '@progress/kendo-angular-intl';
+
 const PAGES_COMPONENTS = [
   PagesComponent,
   DashboardComponent,
@@ -62,6 +69,10 @@ const PAGES_COMPONENTS = [
     FormsModule,
     NgxQRCodeModule,
     QRCodeModule,
+    TimepickerModule.forRoot(),
+    BsDatepickerModule.forRoot(),
+ 
+    // BrowserModule, BrowserAnimationsModule, IntlModule
     
   ],
   declarations: [
