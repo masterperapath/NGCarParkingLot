@@ -18,6 +18,7 @@ var objToday = new Date(),
   //curMeridiem = objToday.getHours() > 12 ? "PM" : "AM";
 var today = "วัน"+dayOfWeek+" ที่ "+dayOfMonth+" "  + " " + curMonth + " " + curYear+ "  เวลา " + curHour + ":" + curMinute;
 
+
 @Component({
   selector: 'ngx-cp002',
   templateUrl: './cp002.component.html',
@@ -37,12 +38,14 @@ export class Cp002Component implements OnInit {
   q3: any;
   myDateMDY: any;
   time: any;
+  timea: any;
 
   constructor(private router: Router) {
+    
   }
   ngOnInit() {
     // this.ismeridian = this.ismeridian;
-    
+    this.timea = this.displayDate;
     this.ismeridian = !this.ismeridian;
     // this.time = (<HTMLInputElement>document.getElementById("time")).value;
     // console.log(this.time);
@@ -93,6 +96,7 @@ export class Cp002Component implements OnInit {
       q2: new FormControl(),
       q3: new FormControl(),
       time: new FormControl(),
+      timea: new FormControl(),
       // myDateMDY: new FormControl(new Date()),
     });
 
@@ -102,6 +106,7 @@ export class Cp002Component implements OnInit {
       this.q1 = document.getElementById('q1');
       this.q2 = document.getElementById('q2');
       this.q3 = document.getElementById('q3');
+      this.timea = document.getElementById('timea');
     }  
 }
 
