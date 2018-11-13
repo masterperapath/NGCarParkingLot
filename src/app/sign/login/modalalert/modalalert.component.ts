@@ -23,7 +23,7 @@ import { Router } from '@angular/router';
 export class ModalAlComponent {
 
   modalHeader: string;
-  modalContent = `ต้องการกลับไปหน้าเริ่มต้นหรือไม่`;
+  modalContent = `Username หรือ Password ไม่ถูกต้อง`;
 
   constructor(private activeModal: NgbActiveModal,
               private router: Router,) { }

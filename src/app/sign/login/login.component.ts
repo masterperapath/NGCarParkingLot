@@ -64,7 +64,8 @@ export class LoginComponent implements OnInit {
           this.router.navigate(["/pages/dashboard"]);
         } else {
           this.router.navigate(["/sign/login"]);
-          alert("Username or Password Incorrect");
+          // alert("Username or Password Incorrect");
+          this.showLargeModal();
         }
       });
     }
