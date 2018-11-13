@@ -26,5 +26,26 @@ export class MysqlService {
         console.log(res.toString());
       });
   }
+
+  public login (_username: string, _password: string){ //url, {customerID: '', firstName: _firstName, lastName: _lastName, licensePlate: _licensePlate}, {headers: headers}
+    // return this._http.post(this._baseUrlController+'Auth/login').map(rep => rep.json());
+    const url = this._baseUrlController+'Auth/login';
+    const headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    _username = _username;
+    return this._http.post(url, {username: _username, password: _password}, {headers: headers});//.map(rep => rep.json());
+  }
+
+  // _username: string, _password: string, _email:string
+  public register (data){ //url, {customerID: '', firstName: _firstName, lastName: _lastName, licensePlate: _licensePlate}, {headers: headers}
+    // return this._http.post(this._baseUrlController+'Auth/login').map(rep => rep.json());
+    const url = this._baseUrlController+'Auth/register';
+    const headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    
+    data.headers = headers;
+    console.log('Data is :' + data);
+    return this._http.post(url, data);//.map(rep => rep.json());
+  }
 }
 

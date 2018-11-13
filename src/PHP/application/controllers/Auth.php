@@ -1,9 +1,14 @@
 <?php
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: Content-Type");
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+header("Content-Type: application/json; charset=UTF-8");
 defined('BASEPATH') or exit('No direct script access allowed');
 
 class Auth extends CI_Controller
 {
     // $param = array();
+    private $dateTimeFormat;
 
     public function __construct()
     {
@@ -16,6 +21,8 @@ class Auth extends CI_Controller
         $this->load->database();
         $this->check_session();
         $this->load->library('email');
+        date_default_timezone_set('Asia/Bangkok');
+        $this->dateTimeFormat = "Y-m-d H:i:s";
     }
 
     public function login()
@@ -25,7 +32,7 @@ class Auth extends CI_Controller
         $param_decoded = json_decode($param, true);
 
         $ip_address = $this->input->ip_address();
-        $username = $param_decoded["username"];
+        $username = strtolower($param_decoded["username"]);
         $password = $param_decoded["password"];
 
         // $result = $this->Auth_Model->login();
@@ -35,7 +42,7 @@ class Auth extends CI_Controller
         // echo $password;
         // echo $ip_address;
 
-        print_r($this->session->all_userdata());
+        // print_r($this->session->all_userdata());
 
         if ($this->Auth_Model->login($username, $password)) {
             $session_data = array(
@@ -45,11 +52,13 @@ class Auth extends CI_Controller
             );
             $this->session->set_userdata($session_data);
             // redirect(base_url() . 'main/enter');
-            echo 'Logged in';
+            // echo 'Logged in';
+            echo json_encode(array('status' => true));
         } else {
             $this->session->set_flashdata('error', 'Invalid Username and Password');
             // redirect(base_url() . 'main/login');
-            echo 'Invalid Username and Password';
+            // echo 'Invalid Username and Password';
+            echo json_encode(array('status' => false));
         }
 
         // var_dump($this->Auth_Model->login($username, $password));
@@ -83,16 +92,47 @@ class Auth extends CI_Controller
 
     public function register()
     {
-        $this->load->model('Auth_Model');
-        $ret = $this->Auth_Model->register();
+        // * get param
+        $content = file_get_contents("php://input");
+        $data = json_decode($content, true);
 
-        if ($ret) {
-            echo $ret;
-            echo "<br> Register Success.";
-        } else {
-            echo $ret;
-            echo "<br> Register Fail.";
+        // $data = isset($param_data) ? $param_data : '';
+
+        // * new date and time
+        $now = new DateTime(date($this->dateTimeFormat));
+
+        if ($data['username'] != null) {
+            // * username to lowercase
+            $data['username'] = strtolower($data['username']);
         }
+        // * assign dateTime value to data.created_date
+        $data['created_date'] = $now->format('Y-m-d H:i:s');
+
+        // * Password Encrypt
+        // $data["password"] = md5($data["password"]);
+
+        
+
+        // print_r($data);
+        // var_dump($username_available);
+
+
+        if ($this->email_exists($data['email'])) {
+            // echo json_encode(array("yyyy"));
+            echo json_encode(array('data' => "1"));
+            // echo json_encode(array('data' => "1"));
+        } else {
+            if ($this->check_if_username_exists($data['username'])) {
+                $this->load->model('Auth_Model');
+                $this->Auth_Model->register($data);
+                // $this->Auth_Model->test();
+                echo json_encode(array('data' => "2"));
+                // echo json_encode(ret);
+            } else {
+                echo json_encode(array('data' => "3"));
+            }
+        }
+        // $this->db->close();
     }
 
     private function check_session()
@@ -188,12 +228,62 @@ class Auth extends CI_Controller
         }
     }
 
-    public function test(){
-        $email = $this->input->post('email');
-        $firstName = $this->email_exists($email);
-        $email_code = md5($firstName);
-        $verified = $this->Auth_Model->verify_reset_password_code($email, $email_code);
+    public function updatePassword()
+    {
+        // * get param
+        $param = file_get_contents("php://input");
+        $param_decoded = json_decode($param, true);
 
-        var_dump($verified);
+        $curr_password = md5($param_decoded["curr_password"]);
+        $new_password = $param_decoded["new_password"];
+        $conf_password = $param_decoded["conf_password"];
+        $userID = $param_decoded["userID"];
+        $password = $this->Auth_Model->getCurrentPassword($userID);
+
+        if ($password == $curr_password) {
+            if ($new_password == $conf_password) {
+                if ($this->Auth_Model->updatePassword($userID, $new_password)) {
+                    echo 'Password updated successfully.';
+                } else {
+                    echo 'Failed to update password';
+                }
+            } else {
+                echo 'New password & Confirm password is not matching.';
+            }
+        } else {
+            echo 'Sorry! Current password is not matching.';
+        }
+
+        var_dump($password);
+    }
+
+    // public function test(){
+    //     $email = $this->input->post('email');
+    //     $firstName = $this->email_exists($email);
+    //     $email_code = md5($firstName);
+    //     $verified = $this->Auth_Model->verify_reset_password_code($email, $email_code);
+
+    //     var_dump($verified);
+    // }
+
+    public function test()
+    {
+        // * get param
+        $param = file_get_contents("php://input");
+        $param_decoded = json_decode($param, true);
+
+        // $ip_address = $this->input->ip_address();
+        $username = $param_decoded["username"];
+        $password = $param_decoded["password"];
+
+        $result = $this->Auth_Model->login($username, $password);
+
+        var_dump($param_decoded);
+        // echo $email;
+        echo "Password is " . $password;
+        // echo $ip_address;
+
+        var_dump($result);
+
     }
 }

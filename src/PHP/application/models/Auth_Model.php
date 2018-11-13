@@ -16,7 +16,7 @@ class Auth_Model extends CI_Model
         $this->dateTimeFormat = "Y-m-d H:i:s";
     }
 
-    public function register()
+    public function register($data)
     {
         // * json for test
         $s = '[{
@@ -38,28 +38,50 @@ class Auth_Model extends CI_Model
                 "lastName": "obm",
                 "phone": "0111111111",
                 "licensePlate": "ฟข 1111 โอลิมปัส"
+              },
+              {
+                "username": "nuvola10",
+                "email": "nuvola10@hotmail.co.th",
+                "password": "#0901236722",
+                "created_date": "",
+                "firstName": "ยุทธพิชัยย",
+                "lastName": "อบมาลี",
+                "phone": "0901236722",
+                "licensePlate": "บฉ 9226 ฉช"
               }    ]';
-
-        // * get param
-        $content = file_get_contents("php://input");
-        $data = json_decode($content, true);
-
-        // * new date and time
-        $now = new DateTime(date($this->dateTimeFormat));
-
-        // * assign dateTime value to data.created_date
-        $data["created_date"] = $now->format('Y-m-d H:i:s');
 
         // * show value
         // var_dump($data["created_date"]);
 
         // ! delete all records in database
         // return $this->db->empty_table('user');
+        // $this->db->trans_start(); # Starting Transaction
+        // $this->db->trans_strict(false); # See Note 01. If you wish can remove as well
+        // $this->db->insert('user', $data);
+        // $this->db->trans_complete();
 
-        // * Password Encrypt
-        $data["password"] = md5($data["password"]);
+        // if ($this->db->trans_status() === FALSE) {
+        //     # Something went wrong.
+        //     $this->db->trans_rollback();
+        //     return FALSE;
+        // }
+        // else {
+        //     # Everything is Perfect.
+        //     # Committing data to the database.
+        //     $this->db->trans_commit();
+        //     return TRUE;
+        // }
 
-        return $this->db->insert('user', $data);
+        $username = $data['username'];
+        $password = $data['password'];
+        $email = $data['email'];
+
+        $insertData = array(
+            'username' => $username,
+            'password' => $password,
+            'email' => $email
+        );
+        $this->db->insert($insertData);
     }
 
     public function check_if_username_exists($username)
@@ -82,21 +104,21 @@ class Auth_Model extends CI_Model
         // $this->db->where('password', $password);
         $query = $this->db->get('user'); //SELECT * FROM users WHERE username = '$username' AND password = '$password'
 
+        // $password = md5($password);
         $logged_in = $this->_resolve_user_login($username, $password);
         // return $logged_in;
+
         if ($query->num_rows() > 0) {
             // echo 'if statement work '.$logged_in;
             if ($logged_in) {
                 return true;
             } else {
                 return false;
-            }            
+            }
         } else {
             // echo 'else work'.$logged_in;
             return false;
         }
-
-        
 
         // $result = $this->db->query($query);
         // $row = $result->row();
@@ -137,32 +159,41 @@ class Auth_Model extends CI_Model
         $this->session->set_userdata($sess_data);
     }
 
-    public function _resolve_user_login($username, $password){
+    public function _resolve_user_login($username, $password)
+    {
         $this->db->where('username', $username);
         $hash = $this->db->get('user')->row('password');
         return $this->_verify_password_hash($password, $hash);
-        // return "555555555555555";
+        // return $password;
     }
 
-    public function _verify_password_hash($password, $hash){
-        return password_verify($password, $hash);
+    public function _verify_password_hash($password, $hash)
+    {
+        if ($password === $hash) {
+            return true;
+        } else {
+            return false;
+        }
+        // return password_verify($password, $hash);
     }
 
-    public function email_exists($email){
+    public function email_exists($email)
+    {
         $this->db->where('email', $email);
         $query = $this->db->get('user');
 
-        return ($query->num_rows() > 0 && $query->row('email')) ? $query->row('firstName') : false;
+        return ($query->num_rows() > 0) ? true : false;
         // return $query;
     }
 
-    public function verify_reset_password_code ($email, $code){
+    public function verify_reset_password_code($email, $code)
+    {
         $this->db->where('email', $email);
         $query = $this->db->get('user');
         // var_dump($query->row('email'));
-        
+
         var_dump($query->num_rows() > 0);
-        
+
         if ($query->num_rows() > 0) {
             return ($code == md5($query->row('firstName')) ? true : false);
         } else {
@@ -170,16 +201,36 @@ class Auth_Model extends CI_Model
         }
     }
 
-    public function update_password(){
-        $email = $this->input->post('email');
-        $password = md5($this->input->post('password'));
-        $sql = "UPDATE user SET password = '{$password}' WHERE email = '{$email}' LIMIT 1";
+    public function updatePassword($userID, $password)
+    {
+
+        $password = md5($password);
+        $sql = "UPDATE user SET password = '{$password}' WHERE userID = '{$userID}'";
         $this->db->query($sql);
 
-        if ($this->db->affected_rows() === 1) {
+        if ($this->db->affected_rows() > 0) {
             return true;
         } else {
             return false;
         }
+    }
+
+    public function getCurrentPassword($userID)
+    {
+        // $query = $this->db->where('userID', $userID)->get('user');
+        $this->db->where('userID', $userID);
+        $query = $this->db->get('user');
+        if ($query->num_rows() > 0) {
+            return $query->row('password');
+        } else {
+            return 'Invalid current password.';
+        }
+        // return $query->row('password');
+        // return $userID;
+    }
+
+    public function test()
+    {
+        echo "555";
     }
 }

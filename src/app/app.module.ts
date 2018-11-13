@@ -12,7 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { CoreModule } from './@core/core.module';
-
+import { MysqlService } from './services/mysql.service';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ThemeModule } from './@theme/theme.module';
@@ -22,6 +22,7 @@ import { NbCardModule } from "@nebular/theme/components/card/card.module";
 import { NbInputModule } from "@nebular/theme";
 import { NgDatepickerModule } from 'ng2-datepicker';
 import { LandingPageComponent } from './landingPage/landingpage.component';
+import { SweetAlert2Module } from '@toverux/ngx-sweetalert2';
 
 import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
 import { CalendarModule } from '@progress/kendo-angular-dateinputs';
@@ -79,6 +80,7 @@ const PAGES_COMPONENTS = [
     ThemeModule.forRoot(),
     CoreModule.forRoot(),
     QRCodeModule,
+    SweetAlert2Module.forRoot(),
 
 
     BrowserModule, BrowserAnimationsModule, DateInputsModule, CalendarModule,
@@ -92,6 +94,7 @@ const PAGES_COMPONENTS = [
   bootstrap: [AppComponent],
   providers: [
     { provide: APP_BASE_HREF, useValue: '/' },
+    MysqlService
   ],
 })
 export class AppModule {

@@ -1,16 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ToasterService, ToasterConfig, Toast, BodyOutputType } from 'angular2-toaster';
-import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-
 import { ModalComponent } from './modalalert/modalalert.component';
+import 'style-loader!angular2-toaster/toaster.css';
 
 //QRCode
 import { NgxQRCodeModule } from 'ngx-qrcode2';  
 import { QRcodeComponent } from './qrcode/qrcode.component';
 
-import 'style-loader!angular2-toaster/toaster.css';
+
+
 import { ReadPropExpr } from '@angular/compiler';
 
 var status = 'การชำระเงินสำเร็จ';
