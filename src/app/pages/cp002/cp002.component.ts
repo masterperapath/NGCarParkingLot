@@ -44,8 +44,8 @@ export class Cp002Component implements OnInit {
     // this.ismeridian = this.ismeridian;
     
     this.ismeridian = !this.ismeridian;
-    this.time = (<HTMLInputElement>document.getElementById("time")).value;
-    console.log(this.time);
+    // this.time = (<HTMLInputElement>document.getElementById("time")).value;
+    // console.log(this.time);
 
   }
 
