@@ -3,7 +3,9 @@ import { NgxEchartsModule } from 'ngx-echarts';
 
 import { ThemeModule } from '../@theme/theme.module';
 import { SignRoutingModule, SIGN_COMPONENTS } from './sign-routing.module';
+
 import { ModalAlComponent } from './login/modalalert/modalalert.component';
+
 
 
 @NgModule({
@@ -17,7 +19,7 @@ import { ModalAlComponent } from './login/modalalert/modalalert.component';
     ...SIGN_COMPONENTS,
   ],
   entryComponents: [
-    // ModalAlComponent,
+    ModalAlComponent,
 
   ],
   // schemas: [ CUSTOM_ELEMENTS_SCHEMA ]

@@ -6,6 +6,8 @@ import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ForgotComponent } from './forgot/forgot.component';
 
+import { ModalAlComponent } from './login/modalalert/modalalert.component';
+
 import { from } from 'rxjs';
 
 const routes: Routes = [{
@@ -36,5 +38,6 @@ export const SIGN_COMPONENTS = [
   SignUpComponent,
   SignComponent,
   ForgotComponent,
+  ModalAlComponent
 
 ];
