@@ -23,11 +23,21 @@ import { NbInputModule } from "@nebular/theme";
 import { NgDatepickerModule } from 'ng2-datepicker';
 import { LandingPageComponent } from './landingPage/landingpage.component';
 
-// import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
-// import { CalendarModule } from '@progress/kendo-angular-dateinputs';
-// import { IntlModule } from '@progress/kendo-angular-intl';
+import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
+import { CalendarModule } from '@progress/kendo-angular-dateinputs';
+import { IntlModule } from '@progress/kendo-angular-intl';
 
-// import { DatePickerModule } from '@progress/kendo-angular-dateinputs';
+import { DatePickerModule } from '@progress/kendo-angular-dateinputs';
+
+
+import { DatetimePopupModule } from 'ngx-bootstrap-datetime-popup';
+
+// import { TimepickerModule } from 'ngx-bootstrap';
+import { TimepickerModule } from 'ngx-bootstrap/timepicker';
+
+
+import { FormsModule } from '@angular/forms';
+import { DlDateTimePickerDateModule } from 'angular-bootstrap-datetimepicker';
 // import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 // import { AutoCompleteModule } from '@progress/kendo-angular-dropdowns';
 // import { ComboBoxModule } from '@progress/kendo-angular-dropdowns';
@@ -46,8 +56,11 @@ const PAGES_COMPONENTS = [
 
 ];
 @NgModule({
-  declarations: [AppComponent,/* GetCustomersComponent, PostCustomersComponent*/],
-  imports: [
+  declarations: [
+    AppComponent,
+    /* GetCustomersComponent, PostCustomersComponent*/],
+    imports: [
+      DatetimePopupModule,
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
@@ -56,16 +69,24 @@ const PAGES_COMPONENTS = [
     NbInputModule,
     NgDatepickerModule,
     NbCardModule,
+
+    // TimepickerModule.forRoot(),
+
+    FormsModule,
+    DlDateTimePickerDateModule,
+
     NgbModule.forRoot(),
     ThemeModule.forRoot(),
     CoreModule.forRoot(),
     QRCodeModule,
 
 
-    // DatePickerModule,
-    // DateInputsModule,
-    // CalendarModule,
-    // IntlModule,
+    BrowserModule, BrowserAnimationsModule, DateInputsModule, CalendarModule,
+
+    DatePickerModule,
+    DateInputsModule,
+    CalendarModule,
+    IntlModule,
     HttpModule,
   ],
   bootstrap: [AppComponent],
