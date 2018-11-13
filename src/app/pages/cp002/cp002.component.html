@@ -138,17 +138,20 @@
                   [bsConfig]="{ dateInputFormat: 'MM/DD/YYYY' }"> -->
                 </div>
               </div>
+              <h4>เลือกเวลา</h4>
               <div class="row">
                 <div class="col-md-8 offset-2">
                   <timepicker [(ngModel)]="mytime" [showMeridian]="ismeridian" [ngModelOptions]="{standalone: true}" [meridians]="meridians"></timepicker>
                 </div>
               </div>
               <br>
-              <h4>ระยะเวลาในการจอง 2 ชั่วโมง</h4>
+              <!-- <h4>ระยะเวลาในการจอง 2 ชั่วโมง</h4> -->
               <div class="row">
                 <div class="col-md-8 offset-2">
-                  <input type="text" placeholder="" class="effect-2" disabled>
+                  <!-- <input type="text" id="timea" class="effect-2" disabled> -->
+                 <!-- <b>กรุณาทำการจอดรถก่อน เวลา {{displayDate}}</b> -->
                   <span class="focus-border"></span>
+                  <br />
                   <button type="button" class="btn btn-primary" (click)="confirm()">ยืนยันการจอง</button>
                 </div>
               </div>
